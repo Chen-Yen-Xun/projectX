@@ -1,0 +1,361 @@
+/* 匯入google字型 一個import對應一個body */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Klee+One&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap'); */
+
+
+body {
+  /* font-family: "Noto Sans TC", sans-serif; */
+  /* font-family: "Zen Old Mincho", serif; */
+  /* font-family: "Zen Maru Gothic", serif; */
+  /* font-family: "IBM Plex Sans JP", sans-serif; */
+  /* font-family: "Yusei Magic", sans-serif; */
+  /* font-family: "DotGothic16", sans-serif; */
+  font-family: "Klee One", cursive;
+  /* font-family: "Dela Gothic One", sans-serif; */
+  font-optical-sizing: auto;
+  /* font-weight: 900;
+  font-style: normal; */
+}
+
+/* 不見得有這麼多字型選擇 先準備著 */
+.fw-100{
+  font-weight: 100;
+}
+.fw-200{
+  font-weight: 200;
+}
+.fw-300{
+  font-weight: 300;
+}
+.fw-300{
+  font-weight: 300;
+}
+.fw-400{
+  font-weight: 400;
+}
+.fw-500{
+  font-weight: 500;
+}
+.fw-600{
+  font-weight: 600;
+}
+.fw-700{
+  font-weight: 700;
+}
+.fw-800{
+  font-weight: 800;
+}
+.fw-900{
+  font-weight: 900;
+}
+
+/* 公有變數 顏色表 */
+:root {
+  --mycolor01: #feb75d;
+  --mycolor02: #55c9ea;
+  --mycolor03: #013b63;
+  --mycolor04: #00012b;
+  --mycolor05: #eb8f90;
+  --mycolor06: #ffb471;
+  --mycolor07: #adbed2;
+  --mycolor08: #12406a;
+  --mytextcolor01: #000;
+  --mytextcolor02: #fff;
+  --mytextcolor03: #8ad5eb;
+  --mytextcolor04: #8a54a2;
+  --mytextcolor05: #5954a4;
+  --mytextcolor06: #04254e;
+  --gymcolormain01: #007BFF;
+  --gymcolorlight01: #28A745;
+  --gymcolorlight02: #FFC107;
+  --gymcolorlight03: #6F42C1;
+  --gymcolorlight04: #FFC107;
+  --gymcolorlight05: #E83E8C;
+  --gymcolordark01: #343A40;
+  --gymcolordark02: #001F3F;
+  --gymcolorwarn01: #DC3545;
+  --gymcolorwarn02: #FF5733;
+
+}
+
+/* 背景顏色 */
+.bg-01 {
+  background-color: var(--mycolor01);
+}
+.bg-02 {
+  background-color: var(--mycolor02);
+}
+.bg-03 {
+  background-color: var(--mycolor03);
+}
+.bg-04 {
+  background-color: var(--mycolor04);
+}
+.bg-05 {
+  background-color: var(--mycolor05);
+}
+.bg-06 {
+  background-color: var(--mycolor06);
+}
+.bg-07 {
+  background-color: var(--mycolor07);
+}
+.bg-08 {
+  background-color: var(--mycolor08);
+}
+.gym-color-main01{
+  background-color: var(--gymcolormain01);
+}
+.gym-color-light01{
+  background-color: var(--gymcolorlight01);
+}
+.gym-color-light02{
+  background-color: var(--gymcolorlight02);
+}
+.gym-color-light03{
+  background-color: var(--gymcolorlight03);
+}
+.gym-color-light04{
+  background-color: var(--gymcolorlight04);
+}
+.gym-color-light05{
+  background-color: var(--gymcolorlight05);
+}
+.gym-color-dark01{
+  background-color: var(--gymcolordark01);
+}
+.gym-color-dark02{
+  background-color: var(--gymcolordark02);
+}
+.gym-color-warn01{
+  background-color: var(--gymcolorwarn01);
+}
+.gym-color-warn02{
+  background-color: var(--gymcolorwarn02);
+}
+
+
+/* 文字顏色 */
+.text-color01 {
+  color: var(--mytextcolor01);
+}
+.text-color02 {
+  color: var(--mytextcolor02);
+}
+.text-color03 {
+  color: var(--mytextcolor03);
+}
+.text-color04 {
+  color: var(--mytextcolor04);
+}
+.text-color05 {
+  color: var(--mytextcolor05);
+}
+.text-color06 {
+  color: var(--mytextcolor06);
+}
+.text-gym-color-main01{
+  color: var(--gymcolormain01);
+}
+.text-gym-color-light01{
+  color: var(--gymcolorlight01);
+}
+.text-gym-color-light02{
+  color: var(--gymcolorlight02);
+}
+.text-gym-color-light03{
+  color: var(--gymcolorlight03);
+}
+.text-gym-color-light04{
+  color: var(--gymcolorlight04);
+}
+.text-gym-color-light05{
+  color: var(--gymcolorlight05);
+}
+.text-gym-color-dark01{
+  color: var(--gymcolordark01);
+}
+.text-gym-color-dark02{
+  color: var(--gymcolordark02);
+}
+.text-gym-color-warn01{
+  color: var(--gymcolorwarn01);
+}
+.text-gym-color-warn02{
+  color: var(--gymcolorwarn02);
+}
+
+/* 邊框 */
+.myborder-01 {
+  border: var(--mycolor05) 4px dashed;
+}
+.myborder-02 {
+  border: var(--mycolor06) 3px double;
+}
+.myborder-03 {
+  border: var(--mycolor07) 5px solid;
+}
+.myborder-04 {
+  border: var(--mycolor08) 10px dotted;
+}
+
+/* 按鈕 */
+.bg-btn01 {
+  background-color: var(--mycolor07);
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px var(--mycolor04);
+  margin-right: 10px;
+}
+.bg-btn01:hover {
+  background-color: var(--mycolor05);
+  color: var(--mytextcolor04);
+  box-shadow: 2px 2px 2px 2px var(--mytextcolor02);
+}
+.bg-btn02 {
+  background-color: var(--mytextcolor04);
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px var(--mytextcolor01);
+  margin-right: 10px;
+  color: var(--mytextcolor02);
+}
+.bg-btn02:hover {
+  background-color: var(--mytextcolor01);
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px var(--mytextcolor02);
+  margin-right: 10px;
+  color: var(--mytextcolor02);
+}
+.bg-btn03 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-decoration: none;
+  color: var(--mytextcolor01);
+  font-size: 14pt;
+  font-family: "標楷體";
+  background-color: var(--mytextcolor03);
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px 2px var(--mytextcolor01);
+  margin-right: 10px;
+}
+.bg-btn03:hover {
+  background-color: var(--mytextcolor06);
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px var(--mytextcolor03);
+  margin-right: 10px;
+  color: var(--mytextcolor03);
+}
+.bg-btn04 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-decoration: none;
+  color: var(--mytextcolor06);
+  font-size: 14pt;
+  /* font-family: "標楷體"; */
+  background-color: var(--mycolor01);
+  border-radius: 8px;
+  box-shadow: 1px 1px 3px 2px var(--mytextcolor05);
+  margin-right: 10px;
+}
+.bg-btn04:hover {
+  background-color: var(--mycolor05);
+  box-shadow: 1px 1px 4px 2px var(--mytextcolor05);
+  color: var(--mytextcolor01);
+}
+.bg-btn05 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-decoration: none;
+  color: var(--mytextcolor01);
+  font-size: 14pt;
+  /* font-family: "標楷體"; */
+  background-color: var(--mytextcolor04);
+  border-radius: 8px;
+  box-shadow: 1px 1px 3px 2px var(--mycolor04);
+  margin-right: 10px;
+}
+.bg-btn05:hover {
+  background-color: var(--mytextcolor05);
+  box-shadow: 1px 1px 4px 2px var(--mycolor04);
+  color: var(--mytextcolor02);
+}
+/* 背景圖 */
+.bg-cover {
+  background-position: center center;
+  background-size: cover;
+}
+
+/* 卷軸特效 外層box_roller 內層roller */
+.box_roller{
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.roller{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: -100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--mytextcolor02);
+}
+.box_roller:hover .roller{
+  top: 0;
+  transition: top 2s;
+}
+
+/* 響應式網頁設計RWD 倒著思考max/min */
+/* md-768以下 */
+/* @media screen and (max-width:768px){
+} */
+
+/* md-768以上 */
+/* @media screen and (min-width:768px){
+} */
+
+/* table-rwd */
+@media screen and (max-width:992px){
+  .table-rwd thead{
+      display: none;
+  }
+  .table-rwd tbody tr{
+      display: block;
+      margin-top: 10px;
+      border: 5px var(--mytextcolor04) dotted;
+  }
+  .table-rwd tbody td{
+      display: block;
+      overflow: hidden;
+  }
+  .table-rwd tbody td::before{
+      content: attr(data-th)" : ";
+      display: block;
+      width: 6em;
+      color: var(--mycolor03);
+      font-weight: bolder;
+      float: left;
+      text-align: right;
+      padding-right: 1em;
+  }
+  .table-rwd tbody tr td span.table-col{
+      display: block;
+      float: left;
+      width: calc(100% - 6em);
+  }
+}
