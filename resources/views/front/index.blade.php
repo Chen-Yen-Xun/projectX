@@ -240,7 +240,8 @@
     <section id="section03" class="pc-color-main01">
         <div class="container">
             @include("front.product.type")
-            @include("front.product.recommed")
+            @include("front.product.recommend")
+            @include("front.product.pre")
         </div>
     </section>
     <!-- *******************************section0******************************* -->
@@ -248,7 +249,6 @@
 
     </section>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/sweetalert2.all.min.js"></script>
     <script src="js/wow.min.js"></script>
 </body>
