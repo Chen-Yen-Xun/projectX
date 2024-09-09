@@ -114,6 +114,22 @@
             right: 0%;
             z-index: 400;
         }
+        .product_r_card_img01{
+            background-image: url('images/front/product_recommend/recommend01.png');
+            height: 50vh;
+        }
+        .product_r_card_img02{
+            background-image: url('images/front/product_recommend/recommend02.png');
+            height: 50vh;
+        }
+        .product_r_card_img03{
+            background-image: url('images/front/product_recommend/recommend03.png');
+            height: 50vh;
+        }
+        .product_r_card_img04{
+            background-image: url('images/front/product_recommend/recommend04.png');
+            height: 50vh;
+        }
     </style>
 </head>
 
