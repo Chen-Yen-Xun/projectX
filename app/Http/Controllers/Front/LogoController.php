@@ -9,6 +9,6 @@ class LogoController extends Controller
 {
     public function logo()
     {
-        return view("admin.logo");
+        return view("front.logo");
     }
 }
