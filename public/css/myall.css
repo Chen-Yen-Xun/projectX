@@ -82,6 +82,18 @@ body {
   --gymcolordark02: #001F3F;
   --gymcolorwarn01: #DC3545;
   --gymcolorwarn02: #FF5733;
+  --pccolormain01: #003366;
+  --pccolormain02: #6699cc;
+  --pccolormain03: #99ccff;
+  --pccolormain04: #003399;
+  --pccolorminor01: #cccccc;
+  --pccolorminor02: #333333;
+  --pccolorminor03: #e6e6e6;
+  --pccolorwarn01: #ff6600;
+  --pccolorwarn02: #ffcc00;
+  --pccolorwarn03: #ff0000;
+
+
 
 }
 
@@ -140,6 +152,36 @@ body {
 .gym-color-warn02{
   background-color: var(--gymcolorwarn02);
 }
+.pc-color-main01{
+  background-color: var(--pccolormain01);
+}
+.pc-color-main02{
+  background-color: var(--pccolormain02);
+}
+.pc-color-main03{
+  background-color: var(--pccolormain03);
+}
+.pc-color-main04{
+  background-color: var(--pccolormain04);
+}
+.pc-color-minor01{
+  background-color: var(--pccolorminor01);
+}
+.pc-color-minor02{
+  background-color: var(--pccolorminor02);
+}
+.pc-color-minor03{
+  background-color: var(--pccolorminor03);
+}
+.pc-color-warn01{
+  background-color: var(--pccolorwarn01);
+}
+.pc-color-warn02{
+  background-color: var(--pccolorwarn02);
+}
+.pc-color-warn03{
+  background-color: var(--pccolorwarn03);
+}
 
 
 /* 文字顏色 */
@@ -190,6 +232,36 @@ body {
 }
 .text-gym-color-warn02{
   color: var(--gymcolorwarn02);
+}
+.text-pc-color-main01{
+  color: var(--pccolormain01);
+}
+.text-pc-color-main02{
+  color: var(--pccolormain02);
+}
+.text-pc-color-main03{
+  color: var(--pccolormain03);
+}
+.text-pc-color-main04{
+  color: var(--pccolormain04);
+}
+.text-pc-color-minor01{
+  color: var(--pccolorminor01);
+}
+.text-pc-color-minor02{
+  color: var(--pccolorminor02);
+}
+.text-pc-color-minor03{
+  color: var(--pccolorminor03);
+}
+.text-pc-color-warn01{
+  color: var(--pccolorwarn01);
+}
+.text-pc-color-warn02{
+  color: var(--pccolorwarn02);
+}
+.text-pc-color-warn03{
+  color: var(--pccolorwarn03);
 }
 
 /* 邊框 */

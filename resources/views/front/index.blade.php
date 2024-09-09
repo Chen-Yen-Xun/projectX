@@ -34,23 +34,85 @@
         }
         .slider_photo01{
             background-image: url(images/front/slider01.png);
-            height: 90vh;
+            height: 94vh;
         }
         .slider_photo02{
             background-image: url(images/front/slider02.png);
-            height: 90vh;
+            height: 94vh;
         }
         .slider_photo03{
             background-image: url(images/front/slider03.png);
-            height: 90vh;
+            height: 94vh;
         }
         .slider_photo04{
             background-image: url(images/front/slider04.png);
-            height: 90vh;
+            height: 94vh;
         }
         .slider_photo05{
             background-image: url(images/front/slider05.png);
-            height: 90vh;
+            height: 94vh;
+        }
+        .product_images_ring01{
+            position: absolute;
+            bottom: 10%;
+            right: 10%;
+            z-index: 300;
+        }
+        .product_images_ring02{
+            position: absolute;
+            top: 15%;
+            right: 0%;
+            width: 400px;
+            z-index: 200;
+        }
+        .product_images_ring03{
+            position: absolute;
+            top: 20%;
+            right: 40%;
+            width: 300px;
+            z-index: 100;
+        }
+        .product_title_ring01{
+            position: absolute;
+            top: 40%;
+            z-index: 500;
+        }
+        .product_text_ring01{
+            position: absolute;
+            bottom: 15%;
+            z-index: 400;
+        }
+        .product_images_ring04{
+            position: absolute;
+            bottom: 10%;
+            left: 10%;
+            z-index: 300;
+        }
+        .product_images_ring05{
+            position: absolute;
+            top: 15%;
+            left: 0%;
+            width: 400px;
+            z-index: 200;
+        }
+        .product_images_ring06{
+            position: absolute;
+            top: 20%;
+            left: 40%;
+            width: 300px;
+            z-index: 100;
+        }
+        .product_title_ring02{
+            position: absolute;
+            top: 40%;
+            right: 0%;
+            z-index: 500;
+        }
+        .product_text_ring02{
+            position: absolute;
+            bottom: 15%;
+            right: 0%;
+            z-index: 400;
         }
     </style>
 </head>
@@ -155,6 +217,14 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
+        </div>
+    </section>
+    <!-- *******************************section03******************************* -->
+    <!-- 產品 -->
+    <section id="section03" class="pc-color-main01">
+        <div class="container">
+            @include("front.product.type")
+            @include("front.product.recommed")
         </div>
     </section>
     <!-- *******************************section0******************************* -->
