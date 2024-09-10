@@ -44,6 +44,7 @@
                             <li><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x me-3"></i>不建議</li>
                             <li><i class="fa-solid fa-check text-gym-color-main01 fa-2x me-3"></i>推薦 通常不要求</li>
                         </ul>
+                        <h2>以上列出常見的金屬素材對應列表 若您有不同素材的需求歡迎聯繫我們</h2>
                     </div>
                     <div id="tab-2">
                         <h2>鍍鋅鋼</h2>
@@ -76,12 +77,20 @@
                                     <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
                                 </tr>
                                 <tr>
-                                    <td>磷酸鐵、磷酸鋅</td>
+                                    <td>磷酸鐵</td>
                                     <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
                                     <td><i class="fa-regular fa-thumbs-up text-gym-color-light04 fa-2x"></i></td>
                                     <td><i class="fa-regular fa-thumbs-up text-gym-color-light04 fa-2x"></i></td>
                                     <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
                                     <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>磷酸鋅</td>
+                                    <td><i class="fa-solid fa-check text-gym-color-main01 fa-2x"></td>
+                                    <td><i class="fa-solid fa-check text-gym-color-main01 fa-2x"></td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
                                 </tr>
                                 <tr>
                                     <td>鉻酸鹽</td>
@@ -110,7 +119,7 @@
                             <tbody>
                                 <tr>
                                     <td>清潔/脫脂</td>
-                                    <td><i class="fa-regular fa-thumbs-up text-gym-color-light04 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
                                     <td><i class="fa-regular fa-thumbs-up text-gym-color-light04 fa-2x"></i></td>
                                     <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
                                     <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
@@ -119,23 +128,88 @@
                                 <tr>
                                     <td>噴砂</td>
                                     <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
                                     <td><i class="fa-regular fa-thumbs-up text-gym-color-light04 fa-2x"></i></td>
                                     <td><i class="fa-regular fa-thumbs-up text-gym-color-light04 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>磷酸鐵</td>
+                                    <td><i class="fa-solid fa-check text-gym-color-main01 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
+                                    <td><i class="fa-regular fa-thumbs-up text-gym-color-light04 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>磷酸鋅</td>
+                                    <td><i class="fa-solid fa-check text-gym-color-main01 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-check text-gym-color-main01 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
+                                    <td><i class="fa-regular fa-thumbs-up text-gym-color-light04 fa-2x"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>鉻酸鹽</td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="tab-4">
+                    <h2>鋁</h2>
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>前處理方法</th>
+                                    <th>腐蝕等級: 0</th>
+                                    <th>腐蝕等級: 1</th>
+                                    <th>腐蝕等級: 2</th>
+                                    <th>腐蝕等級: 3</th>
+                                    <th>腐蝕等級: 4</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>清潔/脫脂</td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
+                                    <td><i class="fa-regular fa-thumbs-up text-gym-color-light04 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
                                     <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
                                     <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
                                 </tr>
                                 <tr>
-                                    <td>磷酸鐵、磷酸鋅</td>
+                                    <td>噴砂</td>
                                     <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>磷酸鐵</td>
                                     <td><i class="fa-regular fa-thumbs-up text-gym-color-light04 fa-2x"></i></td>
                                     <td><i class="fa-regular fa-thumbs-up text-gym-color-light04 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>磷酸鋅</td>
+                                    <td><i class="fa-regular fa-thumbs-up text-gym-color-light04 fa-2x"></i></td>
+                                    <td><i class="fa-regular fa-thumbs-up text-gym-color-light04 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
                                     <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
                                     <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
                                 </tr>
                                 <tr>
                                     <td>鉻酸鹽</td>
-                                    <td><i class="fa-solid fa-check text-gym-color-main01 fa-2x"></td>
-                                    <td><i class="fa-solid fa-check text-gym-color-main01 fa-2x"></td>
+                                    <td><i class="fa-solid fa-check text-gym-color-main01 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
                                     <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
                                     <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
                                     <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
@@ -143,13 +217,176 @@
                             </tbody>
                         </table>
                     </div>
-                    <div id="tab-4">鋁
+                    <div id="tab-5">
+                    <h2>鎂</h2>
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>前處理方法</th>
+                                    <th>腐蝕等級: 0</th>
+                                    <th>腐蝕等級: 1</th>
+                                    <th>腐蝕等級: 2</th>
+                                    <th>腐蝕等級: 3</th>
+                                    <th>腐蝕等級: 4</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>清潔/脫脂</td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>噴砂</td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>磷酸鐵</td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>磷酸鋅</td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>鉻酸鹽</td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
+                                    <td><i class="fa-regular fa-thumbs-up text-gym-color-light04 fa-2x"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div id="tab-5">鎂
+                    <div id="tab-6">
+                    <h2>銅和黃銅</h2>
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>前處理方法</th>
+                                    <th>腐蝕等級: 0</th>
+                                    <th>腐蝕等級: 1</th>
+                                    <th>腐蝕等級: 2</th>
+                                    <th>腐蝕等級: 3</th>
+                                    <th>腐蝕等級: 4</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>清潔/脫脂</td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>噴砂</td>
+                                    <td><i class="fa-solid fa-check text-gym-color-main01 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>磷酸鐵</td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>磷酸鋅</td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>鉻酸鹽</td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div id="tab-6">銅和黃銅
-                    </div>
-                    <div id="tab-7">鍍鋁鋅
+                    <div id="tab-7">
+                    <h2>鍍鋅鋁</h2>
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>前處理方法</th>
+                                    <th>腐蝕等級: 0</th>
+                                    <th>腐蝕等級: 1</th>
+                                    <th>腐蝕等級: 2</th>
+                                    <th>腐蝕等級: 3</th>
+                                    <th>腐蝕等級: 4</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>清潔/脫脂</td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
+                                    <td><i class="fa-regular fa-thumbs-up text-gym-color-light04 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>噴砂</td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>磷酸鐵</td>
+                                    <td><i class="fa-solid fa-check text-gym-color-main01 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>磷酸鋅</td>
+                                    <td><i class="fa-solid fa-check text-gym-color-main01 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
+                                    <td><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>鉻酸鹽</td>
+                                    <td><i class="fa-regular fa-thumbs-up text-gym-color-light04 fa-2x"></i></td>
+                                    <td><i class="fa-regular fa-thumbs-up text-gym-color-light04 fa-2x"></i></td>
+                                    <td><i class="fa-regular fa-thumbs-up text-gym-color-light04 fa-2x"></i></td>
+                                    <td><i class="fa-regular fa-thumbs-up text-gym-color-light04 fa-2x"></i></td>
+                                    <td><i class="fa-regular fa-thumbs-up text-gym-color-light04 fa-2x"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
