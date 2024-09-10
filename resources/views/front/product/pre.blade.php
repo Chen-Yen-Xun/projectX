@@ -11,7 +11,7 @@
         $("#tabs").tabs();
     });
 </script>
-<div class="row">
+<div class="row" id="product_pre">
     <div class="col-md-12">
         <div>
             <div class="row mt-5">

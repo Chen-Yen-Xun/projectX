@@ -156,16 +156,16 @@
                                             Product
                                         </a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item font_Audiowide font_color01" href="#">Type</a></li>
+                                            <li><a class="dropdown-item font_Audiowide font_color01" href="#section03">Type</a></li>
                                             <li>
                                                 <hr class="dropdown-divider">
                                             </li>
-                                            <li><a class="dropdown-item font_Audiowide font_color01" href="#">recommend</a></li>
-                                            <li><a class="dropdown-item font_Audiowide font_color01" href="#">pre</a></li>
+                                            <li><a class="dropdown-item font_Audiowide font_color01" href="#product_recommend">recommend</a></li>
+                                            <li><a class="dropdown-item font_Audiowide font_color01" href="#product_pre">pre</a></li>
                                         </ul>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link font_Audiowide font_color01 navbar_link_hover" href="#">About us</a>
+                                        <a class="nav-link font_Audiowide font_color01 navbar_link_hover" href="#section04">About us</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link font_Audiowide font_color01 navbar_link_hover" href="#">Contact us</a>
@@ -250,6 +250,14 @@
         <div class="container">
             @include("front.about.timeline")
             @include("front.about.summary")
+        </div>
+    </section>
+    <!-- *******************************section05******************************* -->
+    <!-- 聯絡我們 -->
+    <section id="section05">
+        <div class="container">
+        @include("front.contact.form")
+        @include("front.contact.faq")
         </div>
     </section>
     <!-- *******************************section0******************************* -->

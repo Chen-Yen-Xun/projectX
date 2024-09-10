@@ -363,6 +363,25 @@ body {
   box-shadow: 1px 1px 4px 2px var(--mycolor04);
   color: var(--mytextcolor02);
 }
+.bg-btn06 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-decoration: none;
+  color: var(--mytextcolor02);
+  font-size: 16pt;
+  /* font-family: "標楷體"; */
+  background-color: var(--pccolormain01);
+  border-radius: 8px;
+  box-shadow: 1px 1px 3px 2px var(--mycolor04);
+  margin-right: 10px;
+}
+.bg-btn06:hover {
+  background-color: var(--pccolormain03);
+  box-shadow: 1px 1px 3px 2px var(--mycolor04);
+  color: var(--mytextcolor01);
+}
 /* 背景圖 */
 .bg-cover {
   background-position: center center;

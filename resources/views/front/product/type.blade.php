@@ -2,7 +2,7 @@
     <div class="col-md-12">
         <div>
             <div class="row mt-5">
-                <div class="display-5 fw-900 text-color02"><span class="font_Audiowide" style="font-size: 48px;">Product</span> - 產品 - 類型</div>
+                <div class="display-5 fw-900 text-color02" id="product_type"><span class="font_Audiowide" style="font-size: 48px;">Product</span> - 產品 - 類型</div>
             </div>
             <div class="row mt-5">
                 <div class="col-md-4 text-center">
@@ -40,14 +40,14 @@
                         </a>
                     </div>
                 </div>
-                <div class="mt-5" style="height:70vh; position: relative;">
+                <div class="mt-5" style="height:800px; position: relative;">
                     <img src="images/front/product_type/img_sb01.png" alt="" class="product_images_ring01">
                     <img src="images/front/product_type/img_sb02.png" alt="" class="product_images_ring02">
                     <img src="images/front/product_type/img_sb03.png" alt="" class="product_images_ring03">
                     <div class="product_title_ring01 display-2 fw-900 text-pc-color-minor01">噴砂</div>
                     <div class="product_text_ring01 h3 text-pc-color-minor01 mt-3" style="background-color: rgba(0, 0, 0, 0.5); border-radius: 10px; margin: 10px; padding: 10px; width: 50%;">噴砂通過高壓噴射磨料，能有效去除表面氧化物和銹斑，並增強表面粗糙度，提高塗層附著力。優點是操作靈活，適用範圍廣，缺點是設備成本高，噪音大，且需專業防護措施，適合厚重或耐磨材料的表面處理。</div>
                 </div>
-                <div class="mt-5" style="height:70vh; position: relative;">
+                <div class="mt-5" style="height:800px; position: relative;">
                     <img src="images/front/product_type/img_ch01.png" alt="" class="product_images_ring04">
                     <img src="images/front/product_type/img_ch02.png" alt="" class="product_images_ring05">
                     <img src="images/front/product_type/img_ch03.png" alt="" class="product_images_ring06">
@@ -68,14 +68,14 @@
                         </a>
                     </div>
                 </div>
-                <div class="mt-5" style="height:70vh; position: relative;">
+                <div class="mt-5" style="height:800px; position: relative;">
                     <img src="images/front/product_type/img_sp01.png" alt="" class="product_images_ring01">
                     <img src="images/front/product_type/img_sp02.png" alt="" class="product_images_ring02">
                     <img src="images/front/product_type/img_sp03.png" alt="" class="product_images_ring03">
                     <div class="product_title_ring01 display-2 fw-900 text-pc-color-minor01">靜電塗裝</div>
                     <div class="product_text_ring01 h3 text-pc-color-minor01 mt-3" style="background-color: rgba(0, 0, 0, 0.5); border-radius: 10px; margin: 10px; padding: 10px; width: 50%;">靜電塗裝具有高效的粉末利用率和均勻的塗層分布，適合大規模生產，並能覆蓋形狀複雜的工件。優點包括降低材料浪費、減少環境污染，且塗層附著力強。缺點是初期設備投資較高，操作環境需嚴格控制，並需定期維護以防止設備故障，適用性受到粉體材料的限制。</div>
                 </div>
-                <div class="mt-5" style="height:70vh; position: relative;">
+                <div class="mt-5" style="height:800px; position: relative;">
                     <img src="images/front/product_type/img_cyc01.png" alt="" class="product_images_ring04">
                     <img src="images/front/product_type/img_cyc02.png" alt="" class="product_images_ring05">
                     <img src="images/front/product_type/img_cyc03.png" alt="" class="product_images_ring06">
@@ -96,14 +96,14 @@
                         </a>
                     </div>
                 </div>
-                <div class="mt-5" style="height:70vh; position: relative;">
+                <div class="mt-5" style="height:800px; position: relative;">
                     <img src="images/front/product_type/img_he01.png" alt="" class="product_images_ring01">
                     <img src="images/front/product_type/img_he02.png" alt="" class="product_images_ring02">
                     <img src="images/front/product_type/img_he03.png" alt="" class="product_images_ring03">
                     <div class="product_title_ring01 display-2 fw-900 text-pc-color-minor01">熱風</div>
                     <div class="product_text_ring01 h3 text-pc-color-minor01 mt-3" style="background-color: rgba(0, 0, 0, 0.5); border-radius: 10px; margin: 10px; padding: 10px; width: 50%;">傳統烤箱提供穩定、均勻的加熱，適合各類工件，操作簡單且維護成本低。適合大規模生產，但加熱速度慢、能源消耗高，對於形狀複雜的工件可能熱分布不均。</div>
                 </div>
-                <div class="mt-5" style="height:70vh; position: relative;">
+                <div class="mt-5" style="height:800px; position: relative;">
                     <img src="images/front/product_type/img_ir01.png" alt="" class="product_images_ring04">
                     <img src="images/front/product_type/img_ir02.png" alt="" class="product_images_ring05">
                     <img src="images/front/product_type/img_ir03.png" alt="" class="product_images_ring06">
