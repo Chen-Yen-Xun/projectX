@@ -20,13 +20,13 @@
             <div class="row mt-5">
                 <div id="tabs">
                     <ul>
-                        <li><a href="#tab-1">腐蝕等級</a></li>
-                        <li><a href="#tab-2">鍍鋅鋼</a></li>
-                        <li><a href="#tab-3">鋼鐵</a></li>
-                        <li><a href="#tab-4">鋁</a></li>
-                        <li><a href="#tab-5">鎂</a></li>
-                        <li><a href="#tab-6">銅和黃銅</a></li>
-                        <li><a href="#tab-7">鍍鋁鋅</a></li>
+                        <li><a href="#tab-1" class="fw-900 h4">腐蝕等級</a></li>
+                        <li><a href="#tab-2" class="fw-900 h4">鍍鋅鋼</a></li>
+                        <li><a href="#tab-3" class="fw-900 h4">鋼鐵</a></li>
+                        <li><a href="#tab-4" class="fw-900 h4">鋁</a></li>
+                        <li><a href="#tab-5" class="fw-900 h4">鎂</a></li>
+                        <li><a href="#tab-6" class="fw-900 h4">銅和黃銅</a></li>
+                        <li><a href="#tab-7" class="fw-900 h4">鍍鋁鋅</a></li>
                     </ul>
                     <div id="tab-1">
                         <h2>腐蝕等級</h2>
@@ -44,7 +44,7 @@
                             <li><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x me-3"></i>不建議</li>
                             <li><i class="fa-solid fa-check text-gym-color-main01 fa-2x me-3"></i>推薦 通常不要求</li>
                         </ul>
-                        <h2>以上列出常見的金屬素材對應列表 若您有不同素材的需求歡迎聯繫我們</h2>
+                        <h2>以上列出常見的金屬素材對應列表，若您有不同素材的需求歡迎聯繫我們。</h2>
                     </div>
                     <div id="tab-2">
                         <h2>鍍鋅鋼</h2>
@@ -104,7 +104,7 @@
                         </table>
                     </div>
                     <div id="tab-3">
-                    <h2>鋼鐵</h2>
+                        <h2>鋼鐵</h2>
                         <table class="table table-striped table-bordered">
                             <thead>
                                 <tr>
@@ -161,7 +161,7 @@
                         </table>
                     </div>
                     <div id="tab-4">
-                    <h2>鋁</h2>
+                        <h2>鋁</h2>
                         <table class="table table-striped table-bordered">
                             <thead>
                                 <tr>
@@ -218,7 +218,7 @@
                         </table>
                     </div>
                     <div id="tab-5">
-                    <h2>鎂</h2>
+                        <h2>鎂</h2>
                         <table class="table table-striped table-bordered">
                             <thead>
                                 <tr>
@@ -275,7 +275,7 @@
                         </table>
                     </div>
                     <div id="tab-6">
-                    <h2>銅和黃銅</h2>
+                        <h2>銅和黃銅</h2>
                         <table class="table table-striped table-bordered">
                             <thead>
                                 <tr>
@@ -332,7 +332,7 @@
                         </table>
                     </div>
                     <div id="tab-7">
-                    <h2>鍍鋅鋁</h2>
+                        <h2>鍍鋅鋁</h2>
                         <table class="table table-striped table-bordered">
                             <thead>
                                 <tr>
