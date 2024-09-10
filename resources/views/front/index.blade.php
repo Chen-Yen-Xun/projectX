@@ -244,6 +244,14 @@
             @include("front.product.pre")
         </div>
     </section>
+    <!-- *******************************section04******************************* -->
+     <!-- 關於我們 -->
+    <section id="section04">
+        <div class="container">
+            @include("front.about.timeline")
+            @include("front.about.summary")
+        </div>
+    </section>
     <!-- *******************************section0******************************* -->
     <section id="section0">
 

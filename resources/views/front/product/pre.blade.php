@@ -17,7 +17,7 @@
             <div class="row mt-5">
                 <div class="display-5 fw-900 text-color02"><span class="font_Audiowide" style="font-size: 48px;">Product</span> - 產品 - 前處理</div>
             </div>
-            <div class="row mt-5">
+            <div class="row my-5">
                 <div id="tabs">
                     <ul>
                         <li><a href="#tab-1" class="fw-900 h4">腐蝕等級</a></li>
@@ -29,7 +29,7 @@
                         <li><a href="#tab-7" class="fw-900 h4">鍍鋁鋅</a></li>
                     </ul>
                     <div id="tab-1">
-                        <h2>腐蝕等級</h2>
+                        <h2 class="mt-3">腐蝕等級</h2>
                         <ul>
                             <li>等級0: 相對溼度低於60的室內</li>
                             <li>等級1: 室內無暖氣 通風良好的房間</li>
@@ -37,14 +37,14 @@
                             <li>等級3: 人口稠密地區或工業區附近 靠近海洋的開闊水域之上</li>
                             <li>等級4: 恆定高濕度 靠近製造或使用化學品的工業區</li>
                         </ul>
-                        <h2>前處理衡量標準</h2>
+                        <h2 class="mt-3">前處理衡量標準</h2>
                         <ul>
                             <li><i class="fa-solid fa-thumbs-up text-gym-color-light01 fa-2x me-3"></i>建議</li>
                             <li><i class="fa-regular fa-thumbs-up text-gym-color-light04 fa-2x me-3"></i>可接受</li>
                             <li><i class="fa-solid fa-thumbs-down text-gym-color-light05 fa-2x me-3"></i>不建議</li>
                             <li><i class="fa-solid fa-check text-gym-color-main01 fa-2x me-3"></i>推薦 通常不要求</li>
                         </ul>
-                        <h2>以上列出常見的金屬素材對應列表，若您有不同素材的需求歡迎聯繫我們。</h2>
+                        <h2 class="mt-3">以上列出常見的金屬素材對應列表，若您有不同素材的需求歡迎聯繫我們。</h2>
                     </div>
                     <div id="tab-2">
                         <h2>鍍鋅鋼</h2>
