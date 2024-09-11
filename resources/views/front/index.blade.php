@@ -261,8 +261,11 @@
         </div>
     </section>
     <!-- *******************************section0******************************* -->
-    <section id="section0">
-
+    <!-- footer -->
+    <section id="section06" style="background-color: var(--pccolormain01);">
+        <div class="container">
+            @include("front.footer.footer")
+        </div>
     </section>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/sweetalert2.all.min.js"></script>
