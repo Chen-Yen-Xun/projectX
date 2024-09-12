@@ -52,6 +52,18 @@
             background-image: url(images/front/slider05.png);
             height: 94vh;
         }
+
+        .goTop{
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            transform: translateX(0);
+            transition: transform 0.2s;
+        }
+        .goTop.hide {
+            transform: translateX(120%);
+        }
+
         .product_images_ring01{
             position: absolute;
             bottom: 10%;
@@ -168,7 +180,7 @@
                                         <a class="nav-link font_Audiowide font_color01 navbar_link_hover" href="#section04">About us</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link font_Audiowide font_color01 navbar_link_hover" href="#">Contact us</a>
+                                        <a class="nav-link font_Audiowide font_color01 navbar_link_hover" href="#section05">Contact us</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link font_Audiowide font_color01 navbar_shop_hover" href="#">Shop</a>
@@ -235,6 +247,10 @@
             </button>
         </div>
     </section>
+    
+    <div class="goTop hide">
+        <a href="#" class="text-end sticky-top position-sticky goTopBtn jq-goTop"><img src="images/front/top.png" alt=""></a>
+    </div>
     <!-- *******************************section03******************************* -->
     <!-- 產品 -->
     <section id="section03" class="pc-color-main01">
@@ -270,6 +286,26 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/sweetalert2.all.min.js"></script>
     <script src="js/wow.min.js"></script>
+    <script>
+        $(".jq-goTop").click(function (e) {
+            e.preventDefault();
+            $("html,body").animate(
+                {
+                scrollTop: 0,
+                },
+                600
+            );
+        });
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 1100) {
+                if ($(".goTop").hasClass("hide")) {
+                $(".goTop").toggleClass("hide");
+                }
+            } else {
+                $(".goTop").addClass("hide");
+            }
+        });
+    </script>
 </body>
 
 </html>
