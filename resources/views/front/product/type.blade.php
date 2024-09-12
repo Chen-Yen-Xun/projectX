@@ -85,13 +85,13 @@
                 <div id="sub_type03" class="row mt-5">
                     <div class="col-md-6 text-center">
                         <a href="" style="text-decoration: none;">
-                            <img src="images/front/button/button_heat.png" alt="">
+                            <img src="images/front/button/button_heat.gif" alt="" class="icon_heat">
                             <div class="display-4 fw-900 text-pc-color-minor03">熱風</div>
                         </a>
                     </div>
                     <div class="col-md-6 text-center">
                         <a href="" style="text-decoration: none;">
-                            <img src="images/front/button/button_ir.png" alt="">
+                            <img src="images/front/button/button_ir.gif" alt="">
                             <div class="display-4 fw-900 text-pc-color-minor03">IR</div>
                         </a>
                     </div>

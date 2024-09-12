@@ -151,7 +151,7 @@
     <section id="section01" style="background-color: #FFFFFF;">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-10">
                     <nav class="navbar navbar-expand-lg" style="background-color: #FFFFFF;">
                         <div class="container-fluid">
                             <a class="navbar-brand font_Audiowide" href="#"><img src="images\front\CP.svg" alt=""><span class="ms-3 h3 fw-900 font_color01">長平塗裝</span></a>
@@ -189,6 +189,13 @@
                             </div>
                         </div>
                     </nav>
+                </div>
+                <div class="col-md-2">
+                    <div>
+                        <a href="" style="text-decoration: none; color:#003366">
+                            <i class="fa-solid fa-user fa-2x"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

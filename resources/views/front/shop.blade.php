@@ -38,7 +38,7 @@
                     <a href="" style="text-decoration: none; color:#003366">
                         <i class="fa-solid fa-user fa-2x me-1"></i>
                     </a>
-                    <a href="" style="text-decoration: none; color:#003366" class="">                        
+                    <a href="" style="text-decoration: none; color:#003366" class="">
                         <i class="fa-solid fa-cart-shopping fa-2x me-1"></i>
                     </a>
                 </div>
