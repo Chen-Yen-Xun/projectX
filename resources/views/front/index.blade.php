@@ -183,7 +183,7 @@
                                         <a class="nav-link font_Audiowide font_color01 navbar_link_hover" href="#section05">Contact us</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link font_Audiowide font_color01 navbar_shop_hover" href="#">Shop</a>
+                                        <a class="nav-link font_Audiowide font_color01 navbar_shop_hover" href="/shop">Shop</a>
                                     </li>
                                 </ul>
                             </div>
@@ -293,7 +293,7 @@
                 {
                 scrollTop: 0,
                 },
-                600
+                1000
             );
         });
         $(window).scroll(function () {
