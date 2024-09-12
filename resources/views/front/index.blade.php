@@ -32,6 +32,13 @@
         .navbar_shop_hover:hover {
             color: #ffcc00;
         }
+        .member_button{ 
+            text-decoration: none;
+            color: #003366;
+        }
+        .member_button:hover {
+            color: #ff6600;
+        }
         .slider_photo01{
             background-image: url(images/front/slider01.png);
             height: 94vh;
@@ -161,38 +168,38 @@
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                                     <li class="nav-item">
-                                        <a class="nav-link font_Audiowide font_color01 navbar_link_hover" aria-current="page" href="#">Home</a>
+                                        <a class="nav-link font_Audiowide font_color01 navbar_link_hover" aria-current="page" href="#" title="首頁">Home</a>
                                     </li>
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle font_Audiowide font_color01 navbar_link_hover" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a class="nav-link dropdown-toggle font_Audiowide font_color01 navbar_link_hover" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="產品">
                                             Product
                                         </a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item font_Audiowide font_color01" href="#section03">Type</a></li>
+                                            <li><a class="dropdown-item font_Audiowide font_color01" href="#section03" title="類型">Type</a></li>
                                             <li>
                                                 <hr class="dropdown-divider">
                                             </li>
-                                            <li><a class="dropdown-item font_Audiowide font_color01" href="#product_recommend">recommend</a></li>
-                                            <li><a class="dropdown-item font_Audiowide font_color01" href="#product_pre">pre</a></li>
+                                            <li><a class="dropdown-item font_Audiowide font_color01" href="#product_recommend" title="推薦">recommend</a></li>
+                                            <li><a class="dropdown-item font_Audiowide font_color01" href="#product_pre" title="前處理">pre</a></li>
                                         </ul>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link font_Audiowide font_color01 navbar_link_hover" href="#section04">About us</a>
+                                        <a class="nav-link font_Audiowide font_color01 navbar_link_hover" href="#section04" title="關於我們">About us</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link font_Audiowide font_color01 navbar_link_hover" href="#section05">Contact us</a>
+                                        <a class="nav-link font_Audiowide font_color01 navbar_link_hover" href="#section05" title="聯絡我們">Contact us</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link font_Audiowide font_color01 navbar_shop_hover" href="/shop">Shop</a>
+                                        <a class="nav-link font_Audiowide font_color01 navbar_shop_hover" href="/shop" title="線上商店">Shop</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </nav>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 pt-3">
                     <div>
-                        <a href="" style="text-decoration: none; color:#003366">
+                        <a href="" class="member_button" title="會員專區">
                             <i class="fa-solid fa-user fa-2x"></i>
                         </a>
                     </div>
@@ -291,6 +298,7 @@
         </div>
     </section>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/sweetalert2.all.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script>
