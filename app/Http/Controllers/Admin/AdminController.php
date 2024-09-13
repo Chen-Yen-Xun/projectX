@@ -30,14 +30,25 @@ class AdminController extends Controller
             // withErrors:回傳錯誤訊息到前一頁
             return back()->withInput()->withErrors(["msg" => "帳號或密碼錯誤"]);
         }else{
-            // session 暫存在伺服器端, 直到清除或過期為止
+            // 非管理員權限900, 禁止登入後台
+            if($member->Level != 900){
+                return back()->withInput()->withErrors(["msg" => "權限不足"]);
+            }else{
+                // session 暫存在伺服器端, 直到清除或過期為止
             session()->put("member_Username", $req->Username);
             // 帳密符合, 轉址
             return redirect("/admin/home");
+            }
         }
     }
     public function home()
     {
         return view("admin.home");
+    }
+
+    public function doLogout()
+    {
+        session()->put("member_Username", "");
+        return redirect("/admin");
     }
 }

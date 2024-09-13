@@ -143,6 +143,32 @@
             height: 50vh;
         }
     </style>
+    <script>
+        function doCheck(Username)
+        {
+            if (Username != "")
+            {
+                $.ajax({
+                    url: "/member/checkUser",
+                    type: "post",
+                    data:{
+                        Username: Username,
+                        _token: "{{ csrf_token() }}"
+                        },
+                        success: function(msg)
+                        {
+                            if (msg == "exist")
+                            {
+                                $("#Username").focus();
+                                $("#msg").html("<font color='red'>此帳號已有人使用</font>")
+                            }else{
+                                $("#msg").html("");
+                            }
+                        }
+                }); 
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -161,29 +187,29 @@
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                                     <li class="nav-item">
-                                        <a class="nav-link font_Audiowide font_color01 navbar_link_hover" aria-current="page" href="#">Home</a>
+                                        <a class="nav-link font_Audiowide font_color01 navbar_link_hover" aria-current="page" href="#" title="首頁">Home</a>
                                     </li>
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle font_Audiowide font_color01 navbar_link_hover" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a class="nav-link dropdown-toggle font_Audiowide font_color01 navbar_link_hover" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="產品">
                                             Product
                                         </a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item font_Audiowide font_color01" href="#section03">Type</a></li>
+                                            <li><a class="dropdown-item font_Audiowide font_color01" href="#section03" title="類型">Type</a></li>
                                             <li>
                                                 <hr class="dropdown-divider">
                                             </li>
-                                            <li><a class="dropdown-item font_Audiowide font_color01" href="#product_recommend">recommend</a></li>
-                                            <li><a class="dropdown-item font_Audiowide font_color01" href="#product_pre">pre</a></li>
+                                            <li><a class="dropdown-item font_Audiowide font_color01" href="#product_recommend" title="推薦">recommend</a></li>
+                                            <li><a class="dropdown-item font_Audiowide font_color01" href="#product_pre" title="前處理">pre</a></li>
                                         </ul>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link font_Audiowide font_color01 navbar_link_hover" href="#section04">About us</a>
+                                        <a class="nav-link font_Audiowide font_color01 navbar_link_hover" href="#section04" title="關於我們">About us</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link font_Audiowide font_color01 navbar_link_hover" href="#section05">Contact us</a>
+                                        <a class="nav-link font_Audiowide font_color01 navbar_link_hover" href="#section05" title="聯絡我們">Contact us</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link font_Audiowide font_color01 navbar_shop_hover" href="/shop">Shop</a>
+                                        <a class="nav-link font_Audiowide font_color01 navbar_shop_hover" href="/shop" title="線上商店">Shop</a>
                                     </li>
                                 </ul>
                             </div>
@@ -192,7 +218,7 @@
                 </div>
                 <div class="col-md-2 pt-3">
                     <div>
-                        <a href="" style="text-decoration: none; color:#003366">
+                        <a href="" style="text-decoration: none; color:#003366" title="會員專區" data-bs-toggle="modal" data-bs-target="#userModal">
                             <i class="fa-solid fa-user fa-2x"></i>
                         </a>
                     </div>
@@ -200,6 +226,104 @@
             </div>
         </div>
     </section>
+
+<!-- userModal -->
+<div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header pc-color-main01">
+                <h1 class="modal-title fs-5 fw-900 text-color02" id="userModalLabel">會員專區</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body fw-900">
+                <ul class="nav nav-pills nav-fill">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">登入</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">註冊</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                        <div class="row mt-3" id="login_modal">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <div class="label form-label">帳號</div>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="mb-5">
+                                    <div class="label form-label">密碼</div>
+                                    <input type="password" class="form-control">
+                                </div>
+                                <div class="mb-3 text-center">
+                                    <button class="btn bg-btn06">登入</button>
+                                    <button class="btn bg-btn05">取消</button>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <i class="fa-solid fa-up-long fa-2x"></i>
+                                <div class="h3 mt-3">還沒有帳號嗎？</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                        <div class="row mt-3" id="regist_modal">
+                            <div class="col-md-6">
+                                <div class="h4 mt-3">
+                                    <ul>
+                                        <li class="my-3 fw-900">會員規章：</li>
+                                        <li class="mt-1">1.會員帳戶僅限本人使用，不得共享或轉讓。</li>
+                                        <li class="mt-1">2.會員需保證提供的個人資料真實、有效。</li>
+                                        <li class="mt-1">3.未經許可，會員不得在平台上進行商業行為。</li>
+                                        <li class="mt-1">4.會員須定期更新帳戶密碼，確保安全。</li>
+                                        <li class="mt-1">5.公司保留隨時修改會員權益的權利，恕不另行通知。</li>
+                                        <li class="mt-1">6.若會員違反規定，公司有權暫停或終止其帳戶。</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <form action="member/insert" method="post">
+                                    {{ csrf_field() }}
+                                    <div class="mb-3">
+                                        <div class="label form-label">帳號</div>
+                                        <input type="text" class="form-control" class="form-control border border-dark" name="Username" id="Username" required autofocus onblur="doCheck(this.value)"><span id="msg"></span>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="label form-label">密碼</div>
+                                        <input type="password" class="form-control" name="Password" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="label form-label">確認密碼</div>
+                                        <input type="password" class="form-control">
+                                    </div>
+                                    <div class="mb-5">
+                                        <div class="label form-label">E-mail</div>
+                                        <input type="password" class="form-control" name="Email" required>
+                                    </div>
+                                    <div class="mb-3 text-center">
+                                        <button class="btn bg-btn04">註冊</button>
+                                        <button class="btn bg-btn05">取消</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
 
     <!-- *******************************section02******************************* -->
     <!-- 幻燈片 -->

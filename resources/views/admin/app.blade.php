@@ -123,8 +123,12 @@
                         <i class="fa-solid fa-screwdriver-wrench text-pc-color-warn03 fa-2x ms-5"></i>
                     </div>
                     <div class="info">
-                        <span class="text-white fw-700">管理員</span>
+                        <div class="text-white fw-700">管理員</div>
                     </div>
+                    <form method="post" action="/admin/doLogout">
+                        {{ csrf_field() }}
+                        <button class="btn bg-btn02 ms-3">登出</button>
+                    </form>
                 </div>
                 <!-- Sidebar Menu -->
                 @include("admin.menu")

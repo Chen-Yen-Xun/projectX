@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Models\Admin;
+namespace App\Models\Front;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Member extends Model
 {
@@ -23,12 +24,16 @@ class Member extends Model
         "createTime"
     ];
 
-    public function getMember($Username, $Password)
+    public function checkUser($Username)
     {
-        $member = self::where("Username", $Username) 
-            ->where("Password", $Password)
-            ->first();
-
+        $member = self::where("Username", $Username)->first();
         return $member;
+    }
+
+    public function getList()
+    {
+        $list = DB::table("member")->paginate(10);
+
+        return $list;
     }
 }
