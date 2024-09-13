@@ -21,7 +21,7 @@ class AdminController extends Controller
             exit;
         }
 
-        $member = (new Member())->getManager($req->Username, $req->Password);
+        $member = (new Member())->getMember($req->Username, $req->Password);
         // 如果無此帳密
         if (empty($member))
         {
@@ -31,7 +31,7 @@ class AdminController extends Controller
             return back()->withInput()->withErrors(["msg" => "帳號或密碼錯誤"]);
         }else{
             // session 暫存在伺服器端, 直到清除或過期為止
-            session()->put("managerId", $req->userId);
+            session()->put("member_Username", $req->Username);
             // 帳密符合, 轉址
             return redirect("/admin/home");
         }
