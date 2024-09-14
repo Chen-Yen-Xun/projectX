@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/myall.css">
+    <script src="js/sweetalert2.all.min.js"></script>
     <style>
         .font_Audiowide {
             font-family: "Audiowide", sans-serif;
@@ -33,23 +34,23 @@
             color: #ffcc00;
         }
         .slider_photo01{
-            background-image: url(images/front/slider01.png);
+            background-image: url(images/front/slider/slider01.png);
             height: 94vh;
         }
         .slider_photo02{
-            background-image: url(images/front/slider02.png);
+            background-image: url(images/front/slider/slider02.gif);
             height: 94vh;
         }
         .slider_photo03{
-            background-image: url(images/front/slider03.png);
+            background-image: url(images/front/slider/slider03.gif);
             height: 94vh;
         }
         .slider_photo04{
-            background-image: url(images/front/slider04.png);
+            background-image: url(images/front/slider/slider04.png);
             height: 94vh;
         }
         .slider_photo05{
-            background-image: url(images/front/slider05.png);
+            background-image: url(images/front/slider/slider05.gif);
             height: 94vh;
         }
 
@@ -154,17 +155,17 @@
                     data:{
                         Username: Username,
                         _token: "{{ csrf_token() }}"
-                        },
-                        success: function(msg)
+                    },
+                    success: function(msg)
+                    {
+                        if (msg == "exist")
                         {
-                            if (msg == "exist")
-                            {
-                                $("#Username").focus();
-                                $("#msg").html("<font color='red'>此帳號已有人使用</font>")
-                            }else{
-                                $("#msg").html("");
-                            }
+                            $("#Username").focus();
+                            $("#msg").html("<font color='red'>此帳號已有人使用</font>")
+                        }else{
+                            $("#msg").html("");
                         }
+                    }
                 }); 
             }
         }
@@ -172,6 +173,14 @@
 </head>
 
 <body>
+    @if (Session::has('message'))
+        <script>
+            Swal.fire({
+                title: "{{ Session::get('message') }}",
+                icon: "success"
+            });
+        </script>
+    @endif
     <!-- *******************************section01******************************* -->
     <!-- Nav Bar -->
     <section id="section01" style="background-color: #FFFFFF;">
@@ -310,21 +319,10 @@
                         </div>
                     </div>
                 </div>
-                
-                
             </div>
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
     <!-- *******************************section02******************************* -->
     <!-- 幻燈片 -->
     <section id="section02">
@@ -338,33 +336,33 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item bg-cover active slider_photo01">
-                    <div class="carousel-caption p-3 rounded-2 d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.3);">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+                    <div class="carousel-caption p-3 rounded-2 d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7);">
+                        <h4 class="fw-900">工件死角？</h4>
+                        <p>「靜電噴槍，死角救星！無論多難噴，粉末均勻平坦，零死角，完美覆蓋！讓工件不再鬧脾氣，塗裝變得簡單又漂亮！」</p>
                     </div>
                 </div>
                 <div class="carousel-item bg-cover slider_photo02">
-                    <div class="carousel-caption p-3 rounded-2 d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.3);">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
+                    <div class="carousel-caption p-3 rounded-2 d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7);">
+                        <h4 class="fw-900">回收功率 99 %</h4>
+                        <p>「粉體塗裝旋風回收設備，採用與知名吸塵器相同的氣流分離原理，確保高效回收與再利用，減少粉體浪費，提升生產效能與環保效益。」</p>
                     </div>
                 </div>
                 <div class="carousel-item bg-cover slider_photo03">
-                    <div class="carousel-caption p-3 rounded-2 d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.3);">
-                        <h5>Third slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
+                    <div class="carousel-caption p-3 rounded-2 d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7);">
+                        <h4 class="fw-900">工業 + 藝術</h4>
+                        <p>「粉體塗裝，從工業走入生活，將技術與藝術完美結合。無論家居還是日常物件，點滴細節中展現美感與實用，為生活增添一抹色彩。」</p>
                     </div>
                 </div>
                 <div class="carousel-item bg-cover slider_photo04">
-                    <div class="carousel-caption p-3 rounded-2 d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.3);">
-                        <h5>fourth slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
+                    <div class="carousel-caption p-3 rounded-2 d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7);">
+                        <h4 class="fw-900">粉 飾 太平</h4>
+                        <p>「目的地：太平區粉體塗裝專業據點。工廠與展售中心已準備就緒，歡迎舊雨新知前來參觀，為您的塗裝需求找到最佳解決方案！」</p>
                     </div>
                 </div>
                 <div class="carousel-item bg-cover slider_photo05">
-                    <div class="carousel-caption p-3 rounded-2 d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.3);">
-                        <h5>fifth slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
+                    <div class="carousel-caption p-3 rounded-2 d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7);">
+                        <h4 class="fw-900">缺了一把槍</h4>
+                        <p>全台剩你沒槍？長平有靜電槍、摩擦槍、手動槍、自動槍，代理、自研發各種品牌型號的塗裝噴槍，歡迎洽詢。</p>
                     </div>
                 </div>
             </div>
@@ -415,7 +413,6 @@
         </div>
     </section>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/sweetalert2.all.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script>
         $(".jq-goTop").click(function (e) {

@@ -37,7 +37,7 @@ class MemberController extends Controller
         $member->Email = $req->Email;
         $member->save();
 
-        Session::flash("message", "已新增");
+        Session::flash("message", "註冊成功！");
         return redirect("/index");
     }
 

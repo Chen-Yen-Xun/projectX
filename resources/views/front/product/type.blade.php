@@ -7,19 +7,19 @@
             <div class="row mt-5">
                 <div class="col-md-4 text-center">
                     <a style="text-decoration: none; cursor:pointer;" id="product_button01">
-                        <img src="images/front/button/button_pre.png" alt="">
+                        <img src="images/front/button/button_pre.gif" alt="">
                         <div class="display-4 fw-900 text-pc-color-minor03">前處理</div>
                     </a>
                 </div>
                 <div class="col-md-4 text-center">
                     <a style="text-decoration: none; cursor:pointer;" id="product_button02">
-                        <img src="images/front/button/button_spray.png" alt="">
+                        <img src="images/front/button/button_spray.gif" alt="">
                         <div class="display-4 fw-900 text-pc-color-minor03">噴塗</div>
                     </a>
                 </div>
                 <div class="col-md-4 text-center">
                     <a style="text-decoration: none; cursor:pointer;" id="product_button03">
-                        <img src="images/front/button/button_solidify.png" alt="">
+                        <img src="images/front/button/button_solidify.gif" alt="">
                         <div class="display-4 fw-900 text-pc-color-minor03">固化</div>
                     </a>
                 </div>
@@ -29,13 +29,13 @@
                 <div id="sub_type01" class="row mt-5 d-none">
                     <div class="col-md-6 text-center">
                         <a style="text-decoration: none; cursor:pointer;" id="sub_type_button1_1">
-                            <img src="images/front/button/button_sandblast.png" alt="">
+                            <img src="images/front/button/button_sandblast.gif" alt="">
                             <div class="display-4 fw-900 text-pc-color-minor03">噴砂</div>
                         </a>
                     </div>
                     <div class="col-md-6 text-center">
                         <a style="text-decoration: none; cursor:pointer;" id="sub_type_button1_2">
-                            <img src="images/front/button/button_chemical.png" alt="">
+                            <img src="images/front/button/button_chemical.gif" alt="">
                             <div class="display-4 fw-900 text-pc-color-minor03">藥劑</div>
                         </a>
                     </div>
@@ -57,13 +57,13 @@
                 <div id="sub_type02" class="row mt-5 d-none">
                     <div class="col-md-6 text-center">
                         <a style="text-decoration: none; cursor:pointer;" id="sub_type_button2_1">
-                            <img src="images/front/button/button_eletron.png" alt="">
+                            <img src="images/front/button/button_eletron.gif" alt="">
                             <div class="display-4 fw-900 text-pc-color-minor03">靜電塗裝</div>
                         </a>
                     </div>
                     <div class="col-md-6 text-center">
                         <a style="text-decoration: none; cursor:pointer;" id="sub_type_button2_2">
-                            <img src="images/front/button/button_cyclone.png" alt="">
+                            <img src="images/front/button/button_cyclone.gif" alt="">
                             <div class="display-4 fw-900 text-pc-color-minor03">cyclone</div>
                         </a>
                     </div>
