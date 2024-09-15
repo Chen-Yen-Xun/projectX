@@ -34,7 +34,7 @@ class AdminController extends Controller
             if($member->Level != 900){
                 return back()->withInput()->withErrors(["msg" => "權限不足"]);
             }else{
-                // session 暫存在伺服器端, 直到清除或過期為止
+            // session 暫存在伺服器端, 直到清除或過期為止
             session()->put("member_Username", $req->Username);
             // 帳密符合, 轉址
             return redirect("/admin/home");

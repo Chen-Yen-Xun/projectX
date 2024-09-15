@@ -9,21 +9,6 @@ use Illuminate\Support\Facades\Session;
 
 class MemberController extends Controller
 {
-    public function list(Request $req)
-    {
-        // $list:變數名稱
-        // Member:Model
-        // get:取全部資料, 也可用all
-        // $list = Member::all();
-        $list = (new Member())->getList();
-
-        // member.list : member是資料夾, list是檔名
-        // view的副檔名為.blade.php
-        // compact:將取得的資料傳至網頁
-        // compact中用引號,沒有$
-        return view("member.list", compact("list",));
-    }
-
     public function add()
     {
         return view("member.add");
@@ -54,7 +39,7 @@ class MemberController extends Controller
     public function update(Request $req)
     {
         $member = Member::find($req->id);
-        $member->Username = $req->Username;
+        // $member->Username = $req->Username;
         $member->Password = $req->Password;
         $member->Email = $req->Email;
         // 也可用 $member->update();
@@ -62,12 +47,6 @@ class MemberController extends Controller
 
         Session::flash("message", "已修改");
         return redirect("/member/list");
-    }
-
-    public function delete(Request $req)
-    {
-        Member::find($req->id)->delete();
-        echo("OK");
     }
 
     public function checkUser(Request $req)
