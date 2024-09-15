@@ -20,4 +20,6 @@ Route::group(["prefix" => "member"], function () {
     Route::post("update", [MemberController::class, "update"]);
     Route::post("delete", [MemberController::class, "delete"]);
     Route::post("checkUser", [MemberController::class, "checkUser"]);
+    Route::post("doLogin", [MemberController::class, "doLogin"]);
+    Route::post("doLogout", [MemberController::class, "doLogout"]);
 });

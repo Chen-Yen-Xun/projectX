@@ -36,4 +36,13 @@ class Member extends Model
 
         return $list;
     }
+
+    public function getMember($Username, $Password)
+    {
+        $member = self::where("Username", $Username) 
+            ->where("Password", $Password)
+            ->first();
+
+        return $member;
+    }
 }

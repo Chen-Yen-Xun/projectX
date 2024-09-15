@@ -33,6 +33,15 @@
         .navbar_shop_hover:hover {
             color: #ffcc00;
         }
+
+        .member_button{
+            text-decoration: none;
+            color: #003366;
+        }
+
+        .member_button:hover{
+            color: #4169e1;
+        }
         .slider_photo01{
             background-image: url(images/front/slider/slider01.png);
             height: 94vh;
@@ -181,6 +190,14 @@
             });
         </script>
     @endif
+    @if (empty(Session::has('member_Username')))
+        <script>
+            Swal.fire({
+                title: "登入成功，{{ Session::get('member_Username', 'member_Level') }}！",
+                icon: "success"
+            });
+        </script>
+    @endif
     <!-- *******************************section01******************************* -->
     <!-- Nav Bar -->
     <section id="section01" style="background-color: #FFFFFF;">
@@ -227,7 +244,7 @@
                 </div>
                 <div class="col-md-2 pt-3">
                     <div>
-                        <a href="" style="text-decoration: none; color:#003366" title="會員專區" data-bs-toggle="modal" data-bs-target="#userModal">
+                        <a href="" title="會員專區" data-bs-toggle="modal" data-bs-target="#userModal" class="member_button">
                             <i class="fa-solid fa-user fa-2x"></i>
                         </a>
                     </div>
@@ -257,18 +274,41 @@
                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
                         <div class="row mt-3" id="login_modal">
                             <div class="col-md-6">
-                                <div class="mb-3">
-                                    <div class="label form-label">帳號</div>
-                                    <input type="text" class="form-control">
-                                </div>
-                                <div class="mb-5">
-                                    <div class="label form-label">密碼</div>
-                                    <input type="password" class="form-control">
-                                </div>
-                                <div class="mb-3 text-center">
-                                    <button class="btn bg-btn06">登入</button>
-                                    <button class="btn bg-btn05">取消</button>
-                                </div>
+                                <form action="member/doLogin" method="post">
+                                    {{ csrf_field() }}
+                                    <div class="mb-3">
+                                        <div class="label form-label">帳號</div>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    @if ($errors->has("msg"))
+                                    <div class="row">
+                                        <div class="col-8 text-danger text-center">{{ $errors->first("msg") }}</div>
+                                    </div>
+                                    @endif
+                                    <div class="mb-3">
+                                        <div class="label form-label">密碼</div>
+                                        <input type="password" class="form-control">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-3 text-center">認證碼</div>
+                                        <div class="col-3">
+                                            <input type="text" name="code" class="form-control" required>
+                                        </div>
+                                        <div class="col-4">
+                                            <!-- <img src="/captcha/math?"> -->
+                                            <img src="/captcha/flat?" onclick="this.src='/captcha/flat?' + Math.random()" style="cursor:pointer">
+                                        </div>
+                                    </div>
+                                    @if ($errors->has("code"))
+                                    <div class="row">
+                                        <div class="col-8 text-danger text-center">{{ $errors->first("code") }}</div>
+                                    </div>
+                                    @endif
+                                    <div class="my-5 text-center">
+                                        <button class="btn bg-btn06" type="submit">登入</button>
+                                        <button class="btn bg-btn05" type="button" data-bs-dismiss="modal">取消</button>
+                                    </div>
+                                </form>
                             </div>
                             <div class="col-md-6 text-center">
                                 <i class="fa-solid fa-up-long fa-2x"></i>
@@ -311,8 +351,8 @@
                                         <input type="password" class="form-control" name="Email" required>
                                     </div>
                                     <div class="mb-3 text-center">
-                                        <button class="btn bg-btn04">註冊</button>
-                                        <button class="btn bg-btn05">取消</button>
+                                        <button class="btn bg-btn04" type="submit">註冊</button>
+                                        <button class="btn bg-btn05" type="button" data-bs-dismiss="modal">取消</button>
                                     </div>
                                 </form>
                             </div>

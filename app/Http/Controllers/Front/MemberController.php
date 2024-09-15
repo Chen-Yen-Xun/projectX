@@ -57,4 +57,38 @@ class MemberController extends Controller
             echo("exist");
         }
     }
+
+    public function doLogin(Request $req)
+    {
+        if (captcha_check($req->code) == false)
+        {
+            return back()->withInput()->withErrors(["code" => "驗證碼錯誤"]);
+            exit;
+        }
+
+        $member = (new Member())->getMember($req->Username, $req->Password);
+        // 如果無此帳密
+        if (empty($member))
+        {
+            // back():回到前一頁
+            // withInput:保留前一的輸入資料
+            // withErrors:回傳錯誤訊息到前一頁
+            return back()->withInput()->withErrors(["msg" => "帳號或密碼錯誤"]);
+        }else{
+            // 登入後判別會員等級 存入Session
+            session()->put("member_Level", $req->Level);
+            // session 暫存在伺服器端, 直到清除或過期為止
+            session()->put("member_Username", $req->Username);
+            
+            // 帳密符合, 轉址
+            return redirect("/index");
+        }
+    }
+
+    public function doLogout()
+    {
+        session()->put("member_Username", "");
+        session()->put("member_Level", "");
+        return redirect("/index");
+    }
 }
