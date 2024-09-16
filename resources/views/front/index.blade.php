@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/myall.css">
     <script src="js/sweetalert2.all.min.js"></script>
+    <script src="js/jquery-3.7.1.js"></script>
     <style>
         .font_Audiowide {
             font-family: "Audiowide", sans-serif;
@@ -219,12 +220,6 @@
         </script>
     @endif
 
-    @if ((Session::get('member_Level')) == 900)
-        <script>
-            $("#section02").addClass("d-none");
-            member_level_900();
-        </script>
-    @endif
 
     <!-- *******************************section01******************************* -->
     <!-- Nav Bar -->
@@ -354,7 +349,7 @@
                             </div>
                             <div class="col-md-6 text-center">
                                 <i class="fa-solid fa-up-long fa-2x text-pc-color-main04"></i>
-                                <div class="h3 mt-3">還沒有帳號嗎？</div>
+                                <div class="h3 mt-3 fw-700">還沒有帳號嗎？</div>
                             </div>
                         </div>
                     </div>
@@ -462,6 +457,76 @@
     <div class="goTop hide">
         <a href="#" class="text-end sticky-top position-sticky goTopBtn jq-goTop"><img src="images/front/top.png" alt=""></a>
     </div>
+    <!-- *******************************section_add01******************************* -->
+    <!-- 會員分級 -->
+    @if (Session::get('member_Level') > 99)
+    <section id="add01" class="pc-color-main01">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <img src="images/front/member/calender.jpg" alt="" style="width: 300px;">
+                </div>
+                <div class="col-md-4 p-5 offset-md-3">
+                    <div class="card p-5 m-5 shadow">
+                        <p class="h2 mb-1 fw-900">快速預約設備維修、保養</p>
+                        <div class="row my-2">
+                            <div class="col-6">
+                                <h4>預約時間</h4>
+                                <input type="datetime-local">
+                                <button class="btn bg-btn02 mt-3">確定預約</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    @endif
+
+    @if (Session::get('member_Level') > 199)
+    <section id="add02" class="pc-color-main01">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-5 p-5 offset-md-5">
+                    <div class="card p-5 m-5 shadow">
+                        <p class="h2 mb-1 fw-900">技術支持與使用手冊下載</p>
+                        <div class="row my-2">
+                            <div class="col-6">
+                                <h4>預約時間</h4>
+                                <input type="datetime-local">
+                                <button class="btn bg-btn02 mt-3">確定預約</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    @endif
+
+    @if (Session::get('member_Level') > 299)
+    <section id="add03" class="pc-color-main01">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-5 p-5 offset-md-5">
+                    <div class="card p-5 m-5 shadow">
+                        <p class="h2 mb-1 fw-900">快速預約設備維修、保養</p>
+                        <div class="row my-2">
+                            <div class="col-6">
+                                <h4>預約時間</h4>
+                                <input type="datetime-local">
+                                <button class="btn bg-btn02 mt-3">確定預約</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    @endif
+
+
     <!-- *******************************section03******************************* -->
     <!-- 產品 -->
     <section id="section03" class="pc-color-main01">
@@ -516,10 +581,6 @@
             }
         });
 
-        function member_level_900(){
-            $("#section02").addClass("d-none");
-            alert("900");
-        }
     </script>
 </body>
 
