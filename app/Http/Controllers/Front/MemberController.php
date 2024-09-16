@@ -76,7 +76,7 @@ class MemberController extends Controller
             return back()->withInput()->withErrors(["msg" => "帳號或密碼錯誤"]);
         }else{
             // 登入後判別會員等級 存入Session
-            session()->put("member_Level", $req->Level);
+            // session()->put("member_Level", $req->Level);
             // session 暫存在伺服器端, 直到清除或過期為止
             session()->put("member_Username", $req->Username);
             
@@ -87,8 +87,8 @@ class MemberController extends Controller
 
     public function doLogout()
     {
-        session()->put("member_Username", "");
-        session()->put("member_Level", "");
+        session()->forget("member_Username");
+        session()->forget("member_Level");
         return redirect("/index");
     }
 }

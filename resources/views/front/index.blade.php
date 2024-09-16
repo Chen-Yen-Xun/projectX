@@ -42,6 +42,16 @@
         .member_button:hover{
             color: #4169e1;
         }
+
+        .logout_button{
+            text-decoration: none;
+            color: #003366;
+        }
+
+        .logout_button:hover{
+            color: #ff0000;
+        }
+
         .slider_photo01{
             background-image: url(images/front/slider/slider01.png);
             height: 94vh;
@@ -190,14 +200,7 @@
             });
         </script>
     @endif
-    @if (empty(Session::has('member_Username')))
-        <script>
-            Swal.fire({
-                title: "登入成功，{{ Session::get('member_Username', 'member_Level') }}！",
-                icon: "success"
-            });
-        </script>
-    @endif
+
     <!-- *******************************section01******************************* -->
     <!-- Nav Bar -->
     <section id="section01" style="background-color: #FFFFFF;">
@@ -243,11 +246,25 @@
                     </nav>
                 </div>
                 <div class="col-md-2 pt-3">
+                    @if (session()->has('member_Username'))
+                    <div>
+                        <a href="" title="會員資料" class="member_button">
+                            <i class="fa-solid fa-user-pen fa-2x"></i>
+                        </a>
+                        <form method="post" action="/member/doLogout" style="margin:0px; display:inline">
+                        {{ csrf_field() }}
+                            <a href="" title="會員登出" class="logout_button">
+                                <i class="fa-solid fa-right-from-bracket fa-2x"></i>
+                            </a>
+                        </form>
+                    </div>
+                    @else
                     <div>
                         <a href="" title="會員專區" data-bs-toggle="modal" data-bs-target="#userModal" class="member_button">
                             <i class="fa-solid fa-user fa-2x"></i>
                         </a>
                     </div>
+                    @endif
                 </div>
             </div>
         </div>

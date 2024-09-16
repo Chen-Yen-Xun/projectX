@@ -9,6 +9,7 @@ class IndexController extends Controller
 {
     public function index()
     {
-        return view("front.index");
+        $username = session('member_Username');
+        return view("front.index", ['member_Username' => $username]);
     }
 }

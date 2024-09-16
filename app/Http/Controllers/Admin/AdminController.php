@@ -48,7 +48,8 @@ class AdminController extends Controller
 
     public function doLogout()
     {
-        session()->put("member_Username", "");
+        session()->flush();
+        // session()->put("member_Username", "");
         return redirect("/admin");
     }
 }
