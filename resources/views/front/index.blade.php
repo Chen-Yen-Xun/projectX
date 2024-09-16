@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>長平 粉體塗裝</title>
+    <title>長平塗裝</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/sweetalert2.min.css">
@@ -41,6 +41,15 @@
 
         .member_button:hover{
             color: #4169e1;
+        }
+
+        .edit_member_button{
+            text-decoration: none;
+            color: #003366;
+        }
+
+        .edit_member_button:hover{
+            color: #ff6600;
         }
 
         .logout_button{
@@ -201,6 +210,22 @@
         </script>
     @endif
 
+    @if (Session::has('member_Username'))
+        <script>
+            Swal.fire({
+                title: "歡迎回來！{{ Session::get('member_Username') }}",
+                icon: "success"
+            });
+        </script>
+    @endif
+
+    @if ((Session::get('member_Level')) == 900)
+        <script>
+            $("#section02").addClass("d-none");
+            member_level_900();
+        </script>
+    @endif
+
     <!-- *******************************section01******************************* -->
     <!-- Nav Bar -->
     <section id="section01" style="background-color: #FFFFFF;">
@@ -245,24 +270,24 @@
                         </div>
                     </nav>
                 </div>
-                <div class="col-md-2 pt-3">
+                <div class="col-md-2 mt-3">
                     @if (session()->has('member_Username'))
                     <div>
-                        <a href="" title="會員資料" class="member_button">
+                        <!-- <a href="" title="會員資料" class="member_button">
                             <i class="fa-solid fa-user-pen fa-2x"></i>
-                        </a>
-                        <form method="post" action="/member/doLogout" style="margin:0px; display:inline">
+                        </a> -->
+                        <button class="btn edit_member_button" title="會員資料"><i class="fa-solid fa-user-pen fa-2x"></i></button>   
+                        
+                        <form method="post" action="/member/doLogout" style="margin: 0px; display:inline">
                         {{ csrf_field() }}
-                            <a href="" title="會員登出" class="logout_button">
-                                <i class="fa-solid fa-right-from-bracket fa-2x"></i>
-                            </a>
+                            <button type="submit" class="btn logout_button" title="會員登出"><i class="fa-solid fa-right-from-bracket fa-2x"></i></button>
                         </form>
                     </div>
                     @else
                     <div>
-                        <a href="" title="會員專區" data-bs-toggle="modal" data-bs-target="#userModal" class="member_button">
+                        <button title="會員專區" data-bs-toggle="modal" data-bs-target="#userModal" class="btn member_button">
                             <i class="fa-solid fa-user fa-2x"></i>
-                        </a>
+                        </button>
                     </div>
                     @endif
                 </div>
@@ -295,7 +320,7 @@
                                     {{ csrf_field() }}
                                     <div class="mb-3">
                                         <div class="label form-label">帳號</div>
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control" name="Username" required>
                                     </div>
                                     @if ($errors->has("msg"))
                                     <div class="row">
@@ -304,7 +329,7 @@
                                     @endif
                                     <div class="mb-3">
                                         <div class="label form-label">密碼</div>
-                                        <input type="password" class="form-control">
+                                        <input type="password" class="form-control" name="Password" required>
                                     </div>
                                     <div class="row">
                                         <div class="col-3 text-center">認證碼</div>
@@ -328,7 +353,7 @@
                                 </form>
                             </div>
                             <div class="col-md-6 text-center">
-                                <i class="fa-solid fa-up-long fa-2x"></i>
+                                <i class="fa-solid fa-up-long fa-2x text-pc-color-main04"></i>
                                 <div class="h3 mt-3">還沒有帳號嗎？</div>
                             </div>
                         </div>
@@ -490,6 +515,11 @@
                 $(".goTop").addClass("hide");
             }
         });
+
+        function member_level_900(){
+            $("#section02").addClass("d-none");
+            alert("900");
+        }
     </script>
 </body>
 
