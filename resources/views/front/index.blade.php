@@ -172,6 +172,119 @@
             background-image: url('images/front/product_recommend/recommend04.png');
             height: 50vh;
         }
+
+        .box {
+        position: relative;
+        border: 1px solid #bbb;
+        background: #eee;
+        float: left;
+        margin: 20px;
+        }
+        .ribbon {
+        position: absolute;
+        right: -5px;
+        top: -5px;
+        z-index: 1;
+        overflow: hidden;
+        width: 93px;
+        height: 93px;
+        text-align: right;
+        }
+        .ribbon span {
+        font-size: 0.8rem;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bold;
+        line-height: 32px;
+        transform: rotate(45deg);
+        width: 125px;
+        display: block;
+        background: #79a70a;
+        background: linear-gradient(#9bc90d 0%, #79a70a 100%);
+        box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+        position: absolute;
+        top: 17px; 
+        right: -29px; 
+        }
+
+        .ribbon span::before {
+        content: '';
+        position: absolute; 
+        left: 0px; top: 100%;
+        z-index: -1;
+        border-left: 3px solid #79A70A;
+        border-right: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        border-top: 3px solid #79A70A;
+        }
+        .ribbon span::after {
+        content: '';
+        position: absolute; 
+        right: 0%; top: 100%;
+        z-index: -1;
+        border-right: 3px solid #79A70A;
+        border-left: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        border-top: 3px solid #79A70A;
+        }
+
+        .red span {
+        background: linear-gradient(#f70505 0%, #8f0808 100%);
+        }
+        .red span::before {
+        border-left-color: #8f0808;
+        border-top-color: #8f0808;
+        }
+        .red span::after {
+        border-right-color: #8f0808;
+        border-top-color: #8f0808;
+        }
+
+        .blue span {
+        background: linear-gradient(#2989d8 0%, #1e5799 100%);
+        }
+        .blue span::before {
+        border-left-color: #1e5799;
+        border-top-color: #1e5799;
+        }
+        .blue span::after {
+        border-right-color: #1e5799;
+        border-top-color: #1e5799;
+        }
+
+        .foo {
+        clear: both;
+        }
+
+        .bar {
+        content: "";
+        left: 0px;
+        top: 100%;
+        z-index: -1;
+        border-left: 3px solid #79a70a;
+        border-right: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        border-top: 3px solid #79a70a;
+        }
+
+        .baz {
+        font-size: 1rem;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bold;
+        line-height: 2em;
+        transform: rotate(45deg);
+        width: 100px;
+        display: block;
+        background: #79a70a;
+        background: linear-gradient(#9bc90d 0%, #79a70a 100%);
+        box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+        position: absolute;
+        top: 100px;
+        left: 1000px;
+        }
     </style>
     <script>
         function doCheck(Username)
@@ -463,16 +576,19 @@
     <section id="add01" class="pc-color-main01">
         <div class="container-fluid">
             <div class="row align-items-center">
-                <div class="col-md-4">
-                    <img src="images/front/member/calender.jpg" alt="" style="width: 300px;">
-                </div>
-                <div class="col-md-4 p-5 offset-md-3">
-                    <div class="card p-5 m-5 shadow">
-                        <p class="h2 mb-1 fw-900">快速預約設備維修、保養</p>
+                <div class="col-md-7 bg-cover" style="background-image: url('images/front/member/tools.jpg'); height: 300px"></div>
+                <div class="col-md-5 p-5">
+                    <div class="card p-5 m-5 shadow box">
+                        <div class="ribbon"><span>會員專屬</span></div>
+                        <p class="h2 mb-1 fw-900">快速預約設備<br>維修、保養</p>
                         <div class="row my-2">
                             <div class="col-6">
                                 <h4>預約時間</h4>
                                 <input type="datetime-local">
+                            </div>
+                        </div>
+                        <div class="row my2">
+                            <div class="col-6 offset-6">
                                 <button class="btn bg-btn02 mt-3">確定預約</button>
                             </div>
                         </div>
@@ -488,18 +604,58 @@
     <section id="add02" class="pc-color-main01">
         <div class="container-fluid">
             <div class="row align-items-center">
-                <div class="col-md-5 p-5 offset-md-5">
-                    <div class="card p-5 m-5 shadow">
-                        <p class="h2 mb-1 fw-900">技術支持與使用手冊下載</p>
+                <div class="col-md-5 p-5">
+                    <div class="card p-5 m-5 shadow box">
+                        <div class="ribbon blue"><span>高級會員</span></div>
+                        <p class="h2 mb-1 fw-900">技術支持與<br>使用手冊下載</p>
                         <div class="row my-2">
-                            <div class="col-6">
-                                <h4>預約時間</h4>
-                                <input type="datetime-local">
-                                <button class="btn bg-btn02 mt-3">確定預約</button>
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button fw-900" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        噴槍快速維修指南
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <a class="h5 fw-900" href="#" style="text-decoration: none;">RX0857噴槍快速維修指南</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed fw-900" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            中控系統快速維修手冊
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div>
+                                                <a class="h5 fw-900" href="#" style="text-decoration: none;">指針式中控系統</a>
+                                            </div>
+                                            <div>
+                                                <a class="h5 fw-900" href="#" style="text-decoration: none;">數位式中控系統</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed fw-900" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            粉管、電路配線圖
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">                                            
+                                            <a class="h5 fw-900" href="#" style="text-decoration: none;">常用配線圖</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="col-md-7 bg-cover" style="background-image: url('images/front/member/document.jpg'); height: 300px"></div>
             </div>
         </div>
     </section>
@@ -509,14 +665,16 @@
     <section id="add03" class="pc-color-main01">
         <div class="container-fluid">
             <div class="row align-items-center">
-                <div class="col-md-5 p-5 offset-md-5">
-                    <div class="card p-5 m-5 shadow">
-                        <p class="h2 mb-1 fw-900">快速預約設備維修、保養</p>
+                <div class="col-md-7 bg-cover" style="background-image: url('images/front/member/save.jpg'); height: 300px"></div>
+                <div class="col-md-5 p-5">
+                    <div class="card p-5 m-5 shadow box">
+                        <div class="ribbon red"><span>老主顧</span></div>
+                        <p class="h2 mb-1 fw-900">線上商店優惠</p>
                         <div class="row my-2">
-                            <div class="col-6">
-                                <h4>預約時間</h4>
-                                <input type="datetime-local">
-                                <button class="btn bg-btn02 mt-3">確定預約</button>
+                            <div class="col-12">
+                                <h4>套裝塗裝設備<span class="text-pc-color-warn03 fw-900">95</span>折</h4>
+                                <h4>耗材<span class="text-pc-color-warn03 fw-900">免運費</span></h4>
+                                <div class="mt-5"><a href="/shop" class="link-danger h3 fw-900" style="text-decoration: none;">詳情請見</a></div>
                             </div>
                         </div>
                     </div>
