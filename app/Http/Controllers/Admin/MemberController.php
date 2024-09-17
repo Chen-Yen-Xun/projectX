@@ -12,7 +12,7 @@ class MemberController extends Controller
     public function list()
     {
         $list = Member::paginate(10);
-        return view("admin.list", compact("list"));
+        return view("admin.member.list", compact("list"));
     }
 
     public function edit(Request $req)
@@ -28,9 +28,10 @@ class MemberController extends Controller
     public function update(Request $req)
     {
         $member = Member::find($req->id);
-        $member->Username = $req->Username;
-        $member->Password = $req->Password;
         $member->Email = $req->Email;
+        $member->Gender = $req->Gender;
+        $member->Address = $req->Address;
+        $member->Tel = $req->Tel;
         // 也可用 $member->update();
         $member->save();
 
@@ -41,6 +42,13 @@ class MemberController extends Controller
     public function delete(Request $req)
     {
         Member::find($req->id)->delete();
-        echo("已刪除會員資料");
+        echo("OK");
+    }
+
+    public function level(Request $req)
+    {
+        $member = Member::find($req->id);
+        $member->Level = $req->Level;
+        echo("LEVEL_UPDATE");
     }
 }
