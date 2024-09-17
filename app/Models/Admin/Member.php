@@ -4,6 +4,7 @@ namespace App\Models\Admin;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Member extends Model
 {
@@ -30,5 +31,14 @@ class Member extends Model
             ->first();
 
         return $member;
+    }
+
+    public function getNumber()
+    {
+        $number = Member::selectRaw('COUNT(Level) as Levelnum, Level')
+        ->groupBy('Level')
+        ->get();
+
+        return $number;
     }
 }
