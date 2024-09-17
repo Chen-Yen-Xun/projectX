@@ -34,5 +34,13 @@
                 </li>
             </ul>
         </li>
+        <li class="nav-item">
+            <a href="/admin/map/map" class="nav-link{{ Request::is('admin/map/*') ? " active" : "" }}">
+            <i class="nav-icon fas fa-solid fa-map-location-dot"></i>
+            <p>
+                地圖
+            </p>
+            </a>
+        </li>
     </ul>
 </nav>

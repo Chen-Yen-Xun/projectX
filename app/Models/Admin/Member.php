@@ -41,4 +41,13 @@ class Member extends Model
 
         return $number;
     }
+
+    public function getCityNumber()
+    {
+        $cityCounts = Member::selectRaw('COUNT(IFNULL(City, 1)) as City_Count, City')
+        ->groupBy('City')
+        ->get();
+
+        return $cityCounts;
+    }
 }

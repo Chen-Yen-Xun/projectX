@@ -55,6 +55,16 @@
             }
         });
 
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+            url: "/admin/chart/getAll",
+            success: showdata_member_township,
+            error: function(){
+                alert("error-member-chart-township.php");
+            }
+        });
+
         const ctx = document.getElementById('myChart');
     
         mychart = new Chart(ctx, {
@@ -194,18 +204,34 @@
                 mylevel = "管理員"
             }else if (item.Level == 300){
                 mylevel = "老主顧"
-                $("#target01").html(item.Levelnum);
-                $("#target01_label").html(mylevel);
             }else if (item.Level == 200){
                 mylevel = "高級會員"
-                $("#target02").html(item.Levelnum);
-                $("#target02_label").html(mylevel);
             }else if (item.Level == 100){
                 mylevel = "一般會員"
             }
             mychart.data.labels.push(mylevel);
             mychart.data.datasets[0].data.push(item.Levelnum);
             mychart.update();
+        });
+    }
+
+    function showdata_member_township (data) {
+        console.log(data);
+        // 清空圖表
+        mychart01.data.labels = [];
+        mychart01.data.datasets[0].data = [];
+
+        // 更改圖表(config)
+        // mychart01.config.type = 'line';
+
+        // 更改圖表名稱
+        mychart01.data.datasets[0].label = "會員居住地分布圖";
+
+        data.data.forEach(function(item){
+            // console.log(item);
+            mychart01.data.labels.push(item.City);
+            mychart01.data.datasets[0].data.push(item.City_Count);
+            mychart01.update();
         });
     }
 </script>

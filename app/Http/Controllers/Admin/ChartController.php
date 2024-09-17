@@ -18,4 +18,10 @@ class ChartController extends Controller
         $number = (new Member())->getNumber();
         return response()->json(array('success' => true, 'data' => $number));
     }
+
+    public function getAll()
+    {
+        $all = (new Member())->getCityNumber();
+        return response()->json(array('success' => true, 'data' => $all));
+    }
 }
