@@ -50,4 +50,13 @@ class Member extends Model
 
         return $cityCounts;
     }
+
+    public function getMemberYear()
+    {
+        $createdTimeline = Member::selectRaw('COUNT(CreateTime) as Created_timeline, EXTRACT(YEAR_MONTH FROM CreateTime) AS CreateTime')
+        ->groupByRaw('EXTRACT(YEAR_MONTH FROM CreateTime)')
+        ->get();
+
+        return $createdTimeline;
+    }
 }

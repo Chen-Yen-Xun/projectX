@@ -579,7 +579,7 @@
                 <div class="col-md-7 bg-cover" style="background-image: url('images/front/member/tools.jpg'); height: 300px"></div>
                 <div class="col-md-5 p-5">
                     <div class="card p-5 m-5 shadow box">
-                        <div class="ribbon"><span>會員專屬</span></div>
+                        <div class="ribbon wow animate__pulse" data-wow-duration="2s" data-wow-delay="1s" data-wow-iteration="10"><span>會員專屬</span></div>
                         <p class="h2 mb-1 fw-900">快速預約設備<br>維修、保養</p>
                         <div class="row my-2">
                             <div class="col-6">
@@ -606,7 +606,7 @@
             <div class="row align-items-center">
                 <div class="col-md-5 p-5">
                     <div class="card p-5 m-5 shadow box">
-                        <div class="ribbon blue"><span>高級會員</span></div>
+                        <div class="ribbon blue wow animate__pulse" data-wow-duration="2s" data-wow-delay="1s" data-wow-iteration="10"><span>高級會員</span></div>
                         <p class="h2 mb-1 fw-900">技術支持與<br>使用手冊下載</p>
                         <div class="row my-2">
                             <div class="accordion" id="accordionExample">
@@ -668,7 +668,7 @@
                 <div class="col-md-7 bg-cover" style="background-image: url('images/front/member/save.jpg'); height: 300px"></div>
                 <div class="col-md-5 p-5">
                     <div class="card p-5 m-5 shadow box">
-                        <div class="ribbon red"><span>老主顧</span></div>
+                        <div class="ribbon red wow animate__pulse" data-wow-duration="2s" data-wow-delay="1s" data-wow-iteration="10"><span>老主顧</span></div>
                         <p class="h2 mb-1 fw-900">線上商店優惠</p>
                         <div class="row my-2">
                             <div class="col-12">
@@ -720,6 +720,8 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script>
+        new WOW().init();
+
         $(".jq-goTop").click(function (e) {
             e.preventDefault();
             $("html,body").animate(

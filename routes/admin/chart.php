@@ -6,4 +6,5 @@ Route::group(["middleware" =>"member","prefix" => "admin/chart"], function(){
     Route::get("chart", [ChartController::class, "chart"]);
     Route::get("getList", [ChartController::class, "getList"]);
     Route::get("getAll", [ChartController::class, "getAll"]);
+    Route::get("getYear", [ChartController::class, "getYear"]);
 });

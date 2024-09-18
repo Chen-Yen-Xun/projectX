@@ -24,4 +24,10 @@ class ChartController extends Controller
         $all = (new Member())->getCityNumber();
         return response()->json(array('success' => true, 'data' => $all));
     }
+
+    public function getYear()
+    {
+        $year = (new Member())->getMemberYear();
+        return response()->json(array('success' => true, 'data' => $year));
+    }
 }
