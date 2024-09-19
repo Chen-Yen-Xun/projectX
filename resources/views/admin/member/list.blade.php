@@ -141,7 +141,7 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        {{ $list->links() }}
+                        {{ $list->onEachSide(1)->links() }}
                     </form>
                 </div>
             </div>

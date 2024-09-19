@@ -384,7 +384,11 @@
                         <!-- <a href="" title="會員資料" class="member_button">
                             <i class="fa-solid fa-user-pen fa-2x"></i>
                         </a> -->
-                        <button class="btn edit_member_button" title="會員資料"><i class="fa-solid fa-user-pen fa-2x"></i></button>   
+                        <button class="btn edit_member_button" title="
+                        @if (Session::has('member_Username'))
+                            {{ Session::get('member_Username') }}
+                        @endif
+                        "><i class="fa-solid fa-user-pen fa-2x"></i></button>   
                         
                         <form method="post" action="/member/doLogout" style="margin: 0px; display:inline">
                         {{ csrf_field() }}

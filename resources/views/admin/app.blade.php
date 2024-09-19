@@ -123,7 +123,11 @@
                         <i class="fa-solid fa-screwdriver-wrench text-pc-color-warn03 fa-2x ms-5"></i>
                     </div>
                     <div class="info">
-                        <div class="text-white fw-700">管理員</div>
+                        <div class="text-white fw-700">
+                        @if (Session::has('member_Username'))
+                        {{ Session::get('member_Username') }}
+                        @endif
+                        </div>
                     </div>
                     <form method="post" action="/admin/doLogout">
                         {{ csrf_field() }}
