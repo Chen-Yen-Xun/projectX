@@ -740,6 +740,11 @@
 
         // AOS
         AOS.init();
+        let scrollRef = 0;
+        $(window).on("resize scroll", function () {
+            // increase value up to 10, then refresh AOS
+            scrollRef <= 10 ? scrollRef++ : AOS.refresh();
+        });
 
         // counter up 2
         const counterUp = window.counterUp.default
