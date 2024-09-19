@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/myall.css">
     <script src="js/sweetalert2.all.min.js"></script>
     <script src="js/jquery-3.7.1.js"></script>
@@ -588,7 +589,7 @@
     <section id="add01" class="pc-color-main01">
         <div class="container-fluid">
             <div class="row align-items-center">
-                <div class="col-md-7 bg-cover" style="background-image: url('images/front/member/tools.jpg'); height: 300px"></div>
+                <div class="col-md-7 bg-cover img-thumbnail" style="background-image: url('images/front/member/tools.jpg'); height: 300px; background-attachment: fixed;"></div>
                 <div class="col-md-5 p-5">
                     <div class="card p-5 m-5 shadow box">
                         <div class="ribbon wow animate__pulse" data-wow-duration="2s" data-wow-delay="1s" data-wow-iteration="10"><span>會員專屬</span></div>
@@ -667,7 +668,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-7 bg-cover" style="background-image: url('images/front/member/document.jpg'); height: 300px"></div>
+                <div class="col-md-7 bg-cover img-thumbnail" style="background-image: url('images/front/member/document.jpg'); height: 300px; background-attachment: fixed;"></div>
             </div>
         </div>
     </section>
@@ -677,7 +678,7 @@
     <section id="add03" class="pc-color-main01">
         <div class="container-fluid">
             <div class="row align-items-center">
-                <div class="col-md-7 bg-cover" style="background-image: url('images/front/member/save.jpg'); height: 300px"></div>
+                <div class="col-md-7 bg-cover img-thumbnail" style="background-image: url('images/front/member/save.jpg'); height: 300px; background-attachment: fixed;"></div>
                 <div class="col-md-5 p-5">
                     <div class="card p-5 m-5 shadow box">
                         <div class="ribbon red wow animate__pulse" data-wow-duration="2s" data-wow-delay="1s" data-wow-iteration="10"><span>老主顧</span></div>
@@ -732,9 +733,13 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
+    <script src="js/aos.js"></script>
     <script>
         // WOW
         new WOW().init();
+
+        // AOS
+        AOS.init();
 
         // counter up 2
         const counterUp = window.counterUp.default

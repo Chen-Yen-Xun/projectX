@@ -19,7 +19,7 @@
         top: 500%;
         left: 50%;
         transform: translateX(-50%);
-        z-index: 200;
+        z-index: 500;
     }
     .timeline-circle02{
         position: relative;
@@ -30,7 +30,7 @@
         top: 500%;
         left: 50%;
         transform: translateX(-50%);
-        z-index: 200;
+        z-index: 500;
     }
     .timeline-circle03{
         position: relative;
@@ -41,7 +41,7 @@
         top: 500%;
         left: 50%;
         transform: translateX(-50%);
-        z-index: 200;
+        z-index: 500;
     }
     .timeline-text01{
         background-color: rgba(0, 0, 0, 0.6);
@@ -76,28 +76,28 @@
             </div>
             <div class="row">
                 <div style="height: 100px;">
-                    <div class="timeline-arrow01"></div>
+                    <div class="timeline-arrow01" data-aos="fade-down"></div>
                 </div>  
-                <div class="timeline-circle01"></div>
-                <div class="col-md-3 offset-md-8">
+                <div class="timeline-circle01" data-aos="zoom-in"></div>
+                <div class="col-md-3 offset-md-8" data-aos="fade-left">
                     <h1 class="timeline-text01">1985年<br>創立於臺中縣<br>太平鄉長龍路</h1>
                 </div>
                 <div style="height: 100px;">
-                    <div class="timeline-arrow01"></div>
+                    <div class="timeline-arrow01" data-aos="fade-down"></div>
                 </div>
-                <div class="timeline-circle02"></div>
-                <div class="col-md-3 offset-md-1">
+                <div class="timeline-circle02" data-aos="zoom-in"></div>
+                <div class="col-md-3 offset-md-1" data-aos="fade-right">
                     <h1 class="timeline-text02">1995年<br>遷址於臺中縣<br>太平鄉民生路</h1>
                 </div>
                 <div style="height: 100px;">
-                    <div class="timeline-arrow01"></div>
+                    <div class="timeline-arrow01" data-aos="fade-down"></div>
                 </div>
-                <div class="timeline-circle03"></div>
-                <div class="col-md-3 offset-md-8">
+                <div class="timeline-circle03" data-aos="zoom-in"></div>
+                <div class="col-md-3 offset-md-8" data-aos="fade-left">
                     <h1 class="timeline-text03">2010年<br>於台中市<br>太平工業區<br>設立銷售據點<br>及實驗展示間</h1>
                 </div>
                 <div style="height: 200px;">
-                    <div class="timeline-arrow01" style="top: -30%;"></div>
+                    <div class="timeline-arrow01" style="top: -30%;" data-aos="fade-down"></div>
                 </div>
             </div>
         </div>
