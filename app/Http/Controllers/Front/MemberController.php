@@ -16,6 +16,11 @@ class MemberController extends Controller
 
     public function insert(Request $req)
     {
+        $req->validate([
+            'Username' => 'required',
+            'Password' => 'required',
+            'Email' => 'email:rfc,dns',
+        ]);
         $member = new Member();
         $member->Username = $req->Username;
         $member->Password = $req->Password;

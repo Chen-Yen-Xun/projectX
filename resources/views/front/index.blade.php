@@ -490,25 +490,25 @@
                                     {{ csrf_field() }}
                                     <div class="mb-3">
                                         <div class="label form-label">帳號</div>
-                                        <input type="text" class="form-control" class="form-control border border-dark" name="Username" id="Username" required autofocus onblur="doCheck(this.value)"><span id="msg"></span>
+                                        <input type="text" class="form-control" class="form-control border border-dark" name="Username" id="Username" required autofocus onblur="doCheck(this.value)" minlength="3" maxlength="8" placeholder="請輸入3至8碼"><span id="msg"></span>
                                         <div class="valid-feedback">符合規定</div>
                                         <div class="invalid-feedback">不符規定</div>
                                     </div>
                                     <div class="mb-3">
                                         <div class="label form-label">密碼</div>
-                                        <input type="password" class="form-control" name="Password" required>
+                                        <input type="password" class="form-control" name="Password" required minlength="3" maxlength="8" placeholder="請輸入3至8碼">
                                         <div class="valid-feedback">符合規定</div>
                                         <div class="invalid-feedback">不符規定</div>
                                     </div>
                                     <div class="mb-3">
                                         <div class="label form-label">確認密碼</div>
-                                        <input type="password" class="form-control">
+                                        <input type="password" class="form-control" required minlength="3" maxlength="8" placeholder="請再次輸入密碼">
                                         <div class="valid-feedback">密碼相同</div>
                                         <div class="invalid-feedback">密碼不同</div>
                                     </div>
                                     <div class="mb-5">
                                         <div class="label form-label">E-mail</div>
-                                        <input type="password" class="form-control" name="Email" required>
+                                        <input type="email" class="form-control" name="Email" required placeholder="請輸入正確電子信箱格式">
                                         <div class="valid-feedback">符合規定</div>
                                         <div class="invalid-feedback">不符規定</div>
                                     </div>
