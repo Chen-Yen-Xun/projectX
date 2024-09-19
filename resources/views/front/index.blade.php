@@ -487,18 +487,26 @@
                                     <div class="mb-3">
                                         <div class="label form-label">帳號</div>
                                         <input type="text" class="form-control" class="form-control border border-dark" name="Username" id="Username" required autofocus onblur="doCheck(this.value)"><span id="msg"></span>
+                                        <div class="valid-feedback">符合規定</div>
+                                        <div class="invalid-feedback">不符規定</div>
                                     </div>
                                     <div class="mb-3">
                                         <div class="label form-label">密碼</div>
                                         <input type="password" class="form-control" name="Password" required>
+                                        <div class="valid-feedback">符合規定</div>
+                                        <div class="invalid-feedback">不符規定</div>
                                     </div>
                                     <div class="mb-3">
                                         <div class="label form-label">確認密碼</div>
                                         <input type="password" class="form-control">
+                                        <div class="valid-feedback">密碼相同</div>
+                                        <div class="invalid-feedback">密碼不同</div>
                                     </div>
                                     <div class="mb-5">
                                         <div class="label form-label">E-mail</div>
                                         <input type="password" class="form-control" name="Email" required>
+                                        <div class="valid-feedback">符合規定</div>
+                                        <div class="invalid-feedback">不符規定</div>
                                     </div>
                                     <div class="mb-3 text-center">
                                         <button class="btn bg-btn04" type="submit">註冊</button>
@@ -533,7 +541,7 @@
                 </div>
                 <div class="carousel-item bg-cover slider_photo02">
                     <div class="carousel-caption p-3 rounded-2 d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.7);">
-                        <h4 class="fw-900">回收功率 99 %</h4>
+                        <h4 class="fw-900">回收功率 <span class="counter01">99</span> %</h4>
                         <p>「粉體塗裝旋風回收設備，採用與知名吸塵器相同的氣流分離原理，確保高效回收與再利用，減少粉體浪費，提升生產效能與環保效益。」</p>
                     </div>
                 </div>
@@ -719,9 +727,33 @@
     </section>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
     <script>
+        // WOW
         new WOW().init();
 
+        // counter up 2
+        const counterUp = window.counterUp.default
+
+        const callback = entries => {
+          entries.forEach( entry => {
+            const el = entry.target
+            if ( entry.isIntersecting && ! el.classList.contains( 'is-visible' ) ) {
+              counterUp( el, {
+                duration: 2000,
+                delay: 16,
+              } )
+              el.classList.add( 'is-visible' )
+            }
+          } )
+        }
+
+        const IO = new IntersectionObserver( callback, { threshold: 1 } )
+
+        const el01 = document.querySelector( '.counter01' )
+        IO.observe( el01 )
+
+        // 回頂部按鈕
         $(".jq-goTop").click(function (e) {
             e.preventDefault();
             $("html,body").animate(
