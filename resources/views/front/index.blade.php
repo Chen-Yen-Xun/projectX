@@ -389,7 +389,7 @@
                         @if (Session::has('member_Username'))
                             {{ Session::get('member_Username') }}
                         @endif
-                        "><i class="fa-solid fa-user-pen fa-2x"></i></button>   
+                        " data-bs-toggle="modal" data-bs-target="#editModal"><i class="fa-solid fa-user-pen fa-2x"></i></button>   
                         
                         <form method="post" action="/member/doLogout" style="margin: 0px; display:inline">
                         {{ csrf_field() }}
@@ -525,6 +525,25 @@
             </div>
         </div>
     </div>
+</div>
+
+<!-- editModal -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="editModalLabel">會員資料編輯</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary">儲存</button>
+      </div>
+    </div>
+  </div>
 </div>
     <!-- *******************************section02******************************* -->
     <!-- 幻燈片 -->
