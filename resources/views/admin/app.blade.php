@@ -131,7 +131,7 @@
                     </div>
                     <form method="post" action="/admin/doLogout">
                         {{ csrf_field() }}
-                        <button class="btn bg-btn02 ms-3">登出</button>
+                        <button class="btn bg-btn03 ms-3 text-white">登出</button>
                     </form>
                 </div>
                 <!-- Sidebar Menu -->
