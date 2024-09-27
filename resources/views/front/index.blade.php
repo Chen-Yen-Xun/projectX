@@ -17,6 +17,28 @@
     <link rel="stylesheet" href="css/myall.css">
     <script src="js/sweetalert2.all.min.js"></script>
     <script src="js/jquery-3.7.1.js"></script>
+    <style>
+        .slider_photo01{
+        background-image: url(images/front/slider/slider01.png);
+        height: 94vh;
+        }
+        .slider_photo02{
+        background-image: url(images/front/slider/slider02.gif);
+        height: 94vh;
+        }
+        .slider_photo03{
+        background-image: url(images/front/slider/slider03.gif);
+        height: 94vh;
+        }
+        .slider_photo04{
+        background-image: url(images/front/slider/slider04.png);
+        height: 94vh;
+        }
+        .slider_photo05{
+        background-image: url(images/front/slider/slider05.gif);
+        height: 94vh;
+        }
+    </style>
     <script>
         function doCheck(Username)
         {
@@ -259,72 +281,71 @@
 
 <!-- editModal -->
 <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header bg-04">
-        <h1 class="modal-title fs-5 fw-900 text-color02" id="editModalLabel">會員資料編輯</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body p-3">
-        <div class="row">
-            <div class="col-5">
-                <div class="mb-3">
-                    <label for="" class="form-label fw-700">會員頭像</label>
-                    <div style="height: 300px; width: 300px;" class="border border-dark">
-                        
-                    </div>
-                    <input type="file" class="form-control mt-3" name="Photo">
-                </div>
-            </div>
-            <div class="col-7">
-                <div class="mb-3">
-                    <label for="" class="form-label fw-700">會員帳號</label>
-                    <input type="text" class="form-control" name="Username" disabled>
-                </div>
-                <div class="mb-3">
-                    <label for="" class="form-label fw-700">E-mail</label>
-                    <input type="email" class="form-control" name="Email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="" class="form-label fw-700">會員電話</label>
-                    <input type="tel" class="form-control" name="Tel">
-                </div>
-                <div class="mb-3">
-                    <label for="" class="form-label fw-700">會員住址</label>
-                    <div class="row">
-                        <div class="col-4">
-                            <select name="city" id="city" class="form-select mt-1">
-                                <option value="" disabled selected class="text-center">請選擇縣市名稱</option>
-                            </select>
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+        <div class="modal-header bg-04">
+            <h1 class="modal-title fs-5 fw-900 text-color02" id="editModalLabel">會員資料編輯</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-3">
+            <div class="row">
+                <div class="col-5">
+                    <div class="mb-3">
+                        <label for="" class="form-label fw-700">會員頭像</label>
+                        <div style="height: 300px; width: 300px;" class="border border-dark">
+                            
                         </div>
-                        <div class="col-4">
-                            <select name="region" id="region" class="form-select mt-1">
-                                <option value="" disabled selected class="text-center">請選擇鄉鎮區名稱</option>
-                            </select>
-                        </div>
+                        <input type="file" class="form-control mt-3" name="Photo">
                     </div>
-                    <input type="text" class="form-control mt-3" name="Address">
                 </div>
-                <div class="mb-3">
-                    <label for="" class="form-label fw-700">會員性別</label>
-                    <div class="row">
-                        <div class="col-4">
-                            <select name="Gender" id="" class="form-select">
-                                <option value=""></option>
-                                <option value="M">男性</option>
-                                <option value="F">女性</option>
-                            </select>
+                <div class="col-7">
+                    <div class="mb-3">
+                        <label for="" class="form-label fw-700">會員帳號</label>
+                        <input type="text" class="form-control" name="Username" disabled>
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label fw-700">E-mail</label>
+                        <input type="email" class="form-control" name="Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label fw-700">會員電話</label>
+                        <input type="tel" class="form-control" name="Tel">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label fw-700">會員住址</label>
+                        <div class="row">
+                            <div class="col-4">
+                                <select name="city" id="city" class="form-select mt-1">
+                                    <option value="" disabled selected class="text-center">請選擇縣市名稱</option>
+                                </select>
+                            </div>
+                            <div class="col-4">
+                                <select name="region" id="region" class="form-select mt-1">
+                                    <option value="" disabled selected class="text-center">請選擇鄉鎮區名稱</option>
+                                </select>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control mt-3" name="Address">
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label fw-700">會員性別</label>
+                        <div class="row">
+                            <div class="col-4">
+                                <select name="Gender" id="" class="form-select">
+                                    <option value=""></option>
+                                    <option value="M">男性</option>
+                                    <option value="F">女性</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-      </div>
-      <div class="modal-footer bg-04">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-        <button type="button" class="btn btn-primary">儲存</button>
-      </div>
+        <div class="modal-footer bg-04">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-primary">儲存</button>
+        </div>
     </div>
   </div>
 </div>

@@ -469,27 +469,6 @@ body {
   color: #ff0000;
 }
 
-/* 首頁版面 - 幻燈片 */
-.slider_photo01{
-  background-image: url(images/front/slider/slider01.png);
-  height: 94vh;
-}
-.slider_photo02{
-  background-image: url(images/front/slider/slider02.gif);
-  height: 94vh;
-}
-.slider_photo03{
-  background-image: url(images/front/slider/slider03.gif);
-  height: 94vh;
-}
-.slider_photo04{
-  background-image: url(images/front/slider/slider04.png);
-  height: 94vh;
-}
-.slider_photo05{
-  background-image: url(images/front/slider/slider05.gif);
-  height: 94vh;
-}
 
 /* 首頁版面 - 產品圖片位置 */
 .product_images_ring01{
