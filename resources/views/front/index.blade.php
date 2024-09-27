@@ -288,59 +288,63 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body p-3">
-            <div class="row">
-                <div class="col-5">
-                    <div class="mb-3">
-                        <label for="" class="form-label fw-700">會員頭像</label>
-                        <div style="height: 300px; width: 300px;" class="border border-dark">
-                            
+            <form action="member/update" method="post">
+                <input type="hidden" name="id" value="">
+                {{ csrf_field() }}
+                <div class="row">
+                    <div class="col-5">
+                        <div class="mb-3">
+                            <label for="" class="form-label fw-700">會員頭像</label>
+                            <div style="height: 300px; width: 300px;" class="border border-dark">
+                                
+                            </div>
+                            <input type="file" class="form-control mt-3" name="Photo">
                         </div>
-                        <input type="file" class="form-control mt-3" name="Photo">
+                    </div>
+                    <div class="col-7">
+                        <div class="mb-3">
+                            <label for="" class="form-label fw-700">會員帳號</label>
+                            <input type="text" class="form-control" name="Username" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label fw-700">E-mail</label>
+                            <input type="email" class="form-control" name="Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label fw-700">會員電話</label>
+                            <input type="tel" class="form-control" name="Tel">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label fw-700">會員住址</label>
+                            <div class="row">
+                                <div class="col-4">
+                                    <select name="City" id="city" class="form-select mt-1">
+                                        <option value="" disabled selected class="text-center">請選擇縣市名稱</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <select name="Town" id="region" class="form-select mt-1">
+                                        <option value="" disabled selected class="text-center">請選擇鄉鎮區名稱</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control mt-3" name="Address">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label fw-700">會員性別</label>
+                            <div class="row">
+                                <div class="col-4">
+                                    <select name="Gender" id="" class="form-select">
+                                        <option value=""></option>
+                                        <option value="M">男性</option>
+                                        <option value="F">女性</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-7">
-                    <div class="mb-3">
-                        <label for="" class="form-label fw-700">會員帳號</label>
-                        <input type="text" class="form-control" name="Username" disabled>
-                    </div>
-                    <div class="mb-3">
-                        <label for="" class="form-label fw-700">E-mail</label>
-                        <input type="email" class="form-control" name="Email" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="" class="form-label fw-700">會員電話</label>
-                        <input type="tel" class="form-control" name="Tel">
-                    </div>
-                    <div class="mb-3">
-                        <label for="" class="form-label fw-700">會員住址</label>
-                        <div class="row">
-                            <div class="col-4">
-                                <select name="city" id="city" class="form-select mt-1">
-                                    <option value="" disabled selected class="text-center">請選擇縣市名稱</option>
-                                </select>
-                            </div>
-                            <div class="col-4">
-                                <select name="region" id="region" class="form-select mt-1">
-                                    <option value="" disabled selected class="text-center">請選擇鄉鎮區名稱</option>
-                                </select>
-                            </div>
-                        </div>
-                        <input type="text" class="form-control mt-3" name="Address">
-                    </div>
-                    <div class="mb-3">
-                        <label for="" class="form-label fw-700">會員性別</label>
-                        <div class="row">
-                            <div class="col-4">
-                                <select name="Gender" id="" class="form-select">
-                                    <option value=""></option>
-                                    <option value="M">男性</option>
-                                    <option value="F">女性</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </form>
         </div>
         <div class="modal-footer bg-04">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
@@ -558,6 +562,49 @@
     <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
     <script src="js/aos.js"></script>
     <script>
+        $(function(){
+            // 載入縣市鄉鎮區資料
+            $.ajax({
+                type: "GET",
+                url: "/js/CityCountyData.json",
+                dataType: "json",
+                async: false,
+                success: function(data){
+                    console.log(data);
+                    CityCountyData = data;
+                },
+                error: function () {
+                    alert("error-/js/CityCountyData.json");
+                }
+            });
+
+            // 產生縣市選單
+            $("#city").empty();
+            $("#city").append('<option value="" disabled selected class="text-center">請選擇縣市名稱</option>');
+            CityCountyData.forEach(function (item) {
+                var strHTML = '<option value="' + item.CityName + '">' + item.CityName + '</option>';
+                $("#city").append(strHTML);
+            });
+
+            // 監聽縣市選單, 產生鄉鎮區選單
+            $("#city").change(function(){
+                // console.log($(this).val());
+                citySelected = $(this).val();
+
+                // 渲染鄉鎮區選單
+                $("#region").empty();
+                $("#region").append('<option value="" disabled selected class="text-center">請選擇鄉鎮區名稱</option>');
+                CityCountyData.forEach(function(item){
+                    if(item.CityName == citySelected){
+                        item.AreaList.forEach(function(item){
+                            // console.log(item.AreaName);
+                            var strHTML = '<option value="' + item.AreaName + '">' + item.AreaName + '</option>';
+                            $("#region").append(strHTML);
+                        });
+                    }
+                });
+            });
+        });
         // WOW
         new WOW().init();
 

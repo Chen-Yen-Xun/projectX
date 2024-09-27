@@ -33,25 +33,24 @@ class MemberController extends Controller
 
     public function edit(Request $req)
     {
-        // $req->id的id來自路由的id, 
-        // 如果路由中的參數為abc, 則$req->abc
-        // find:尋找
         $member = Member::find($req->id);
 
-        return view("member.edit", compact("member"));
+        return view("/index", compact("member"));
     }
 
     public function update(Request $req)
     {
         $member = Member::find($req->id);
-        // $member->Username = $req->Username;
-        $member->Password = $req->Password;
         $member->Email = $req->Email;
-        // 也可用 $member->update();
+        $member->Tel = $req->Tel;
+        $member->City = $req->City;
+        $member->Town = $req->Town;
+        $member->Address = $req->Address;
+        $member->Gender = $req->Gender;
         $member->save();
 
         Session::flash("message", "已修改");
-        return redirect("/member/list");
+        return redirect("/index");
     }
 
     public function checkUser(Request $req)
