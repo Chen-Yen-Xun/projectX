@@ -9,6 +9,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Klee+One&display=swap');
 /* @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap'); */
 
+.font_Audiowide {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+}
 
 body {
   /* font-family: "Noto Sans TC", sans-serif; */
@@ -409,6 +415,162 @@ body {
 .box_roller:hover .roller{
   top: 0;
   transition: top 2s;
+}
+
+/* 回首頁按鈕 */
+.goTop{
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  transform: translateX(0);
+  transition: transform 0.2s;
+}
+.goTop.hide {
+  transform: translateX(120%);
+}
+
+/* 首頁版面 - navbar */
+.font_color01 {
+  color: #003366;
+}
+
+.navbar_link_hover:hover {
+  color: #99ccff;
+}
+
+.navbar_shop_hover:hover {
+  color: #ffcc00;
+}
+
+.member_button{
+  text-decoration: none;
+  color: #003366;
+}
+
+.member_button:hover{
+  color: #4169e1;
+}
+
+.edit_member_button{
+  text-decoration: none;
+  color: #003366;
+}
+
+.edit_member_button:hover{
+  color: #ff6600;
+}
+
+.logout_button{
+  text-decoration: none;
+  color: #003366;
+}
+
+.logout_button:hover{
+  color: #ff0000;
+}
+
+/* 首頁版面 - 幻燈片 */
+.slider_photo01{
+  background-image: url(images/front/slider/slider01.png);
+  height: 94vh;
+}
+.slider_photo02{
+  background-image: url(images/front/slider/slider02.gif);
+  height: 94vh;
+}
+.slider_photo03{
+  background-image: url(images/front/slider/slider03.gif);
+  height: 94vh;
+}
+.slider_photo04{
+  background-image: url(images/front/slider/slider04.png);
+  height: 94vh;
+}
+.slider_photo05{
+  background-image: url(images/front/slider/slider05.gif);
+  height: 94vh;
+}
+
+/* 首頁版面 - 產品圖片位置 */
+.product_images_ring01{
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  z-index: 300;
+}
+.product_images_ring02{
+  position: absolute;
+  top: 15%;
+  right: 0%;
+  width: 400px;
+  z-index: 200;
+}
+.product_images_ring03{
+  position: absolute;
+  top: 20%;
+  right: 40%;
+  width: 300px;
+  z-index: 100;
+}
+.product_title_ring01{
+  position: absolute;
+  top: 40%;
+  z-index: 500;
+}
+.product_text_ring01{
+  position: absolute;
+  bottom: 15%;
+  z-index: 400;
+}
+.product_images_ring04{
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  z-index: 300;
+}
+.product_images_ring05{
+  position: absolute;
+  top: 15%;
+  left: 0%;
+  width: 400px;
+  z-index: 200;
+}
+.product_images_ring06{
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  width: 300px;
+  z-index: 100;
+}
+.product_title_ring02{
+  position: absolute;
+  top: 40%;
+  right: 0%;
+  z-index: 500;
+}
+.product_text_ring02{
+  position: absolute;
+  bottom: 15%;
+  right: 0%;
+  z-index: 400;
+}
+
+/* 首頁版面 - 產品解說 */ 
+.product_r_card_img01{
+  background-image: url('images/front/product_recommend/recommend01.png');
+  height: 50vh;
+}
+.product_r_card_img02{
+  background-image: url('images/front/product_recommend/recommend02.png');
+  height: 50vh;
+}
+.product_r_card_img03{
+  background-image: url('images/front/product_recommend/recommend03.png');
+  height: 50vh;
+}
+.product_r_card_img04{
+  background-image: url('images/front/product_recommend/recommend04.png');
+  height: 50vh;
 }
 
 /* 響應式網頁設計RWD 倒著思考max/min */
