@@ -1,11 +1,11 @@
 ## 圖片展示
 
-![圖片1](./001.png)
-![圖片2](./002.png)
-![圖片3](./003.png)
-![圖片4](./004.png)
-![圖片5](./005.png)
-![圖片6](./006.png)
+![圖片1](./public/images/readme/001.png)
+![圖片2](./public/images/readme/002.png)
+![圖片3](./public/images/readme/003.png)
+![圖片4](./public/images/readme/004.png)
+![圖片5](./public/images/readme/005.png)
+![圖片6](./public/images/readme/006.png)
 
 
 # 主題
