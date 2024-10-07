@@ -197,19 +197,17 @@
     }
 
     function showdata_member_level(data) {
-        // console.log(data);
         // 清空圖表
         mychart.data.labels = [];
         mychart.data.datasets[0].data = [];
 
-        // 更改圖表(config)
+        // 更改圖表類型(config)
         mychart.config.type = 'line';
 
         // 更改圖表名稱
         mychart.data.datasets[0].label = "會員等級分布圖";
 
         data.data.forEach(function(item){
-            // console.log(item);
             if (item.Level == 900){
                 mylevel = "管理員"
             }else if (item.Level == 300){
@@ -226,19 +224,14 @@
     }
 
     function showdata_member_township (data) {
-        // console.log(data);
         // 清空圖表
         mychart01.data.labels = [];
         mychart01.data.datasets[0].data = [];
-
-        // 更改圖表(config)
-        // mychart01.config.type = 'line';
 
         // 更改圖表名稱
         mychart01.data.datasets[0].label = "會員居住地分布圖";
 
         data.data.forEach(function(item){
-            // console.log(item);
             mychart01.data.labels.push(item.City);
             mychart01.data.datasets[0].data.push(item.City_Count);
             mychart01.update();
@@ -246,19 +239,14 @@
     }
 
     function showdata_member_created_at(data){
-        // console.log(data);
         // 清空圖表
         mychart02.data.labels = [];
         mychart02.data.datasets[0].data = [];
-
-        // 更改圖表(config)
-        // mychart01.config.type = 'line';
 
         // 更改圖表名稱
         mychart02.data.datasets[0].label = "會員建立時間分布圖";
 
         data.data.forEach(function(item){
-            // console.log(item);
             mychart02.data.labels.push(item.CreateTime.toString().substring(0, 4) + "年" + item.CreateTime.toString().substring(4) + "月");
             mychart02.data.datasets[0].data.push(item.Created_timeline);
             mychart02.update();

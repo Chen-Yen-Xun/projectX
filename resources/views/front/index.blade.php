@@ -570,7 +570,6 @@
                 dataType: "json",
                 async: false,
                 success: function(data){
-                    console.log(data);
                     CityCountyData = data;
                 },
                 error: function () {
@@ -588,7 +587,6 @@
 
             // 監聽縣市選單, 產生鄉鎮區選單
             $("#city").change(function(){
-                // console.log($(this).val());
                 citySelected = $(this).val();
 
                 // 渲染鄉鎮區選單
@@ -597,7 +595,6 @@
                 CityCountyData.forEach(function(item){
                     if(item.CityName == citySelected){
                         item.AreaList.forEach(function(item){
-                            // console.log(item.AreaName);
                             var strHTML = '<option value="' + item.AreaName + '">' + item.AreaName + '</option>';
                             $("#region").append(strHTML);
                         });

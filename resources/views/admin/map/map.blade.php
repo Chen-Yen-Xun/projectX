@@ -99,7 +99,6 @@
             dataType: "json",
             async: false,
             success: function(data){
-                console.log(data);
                 CityCountyData = data;
             },
             error: function () {
@@ -114,7 +113,6 @@
             dataType: "json",
             async: false,
             success: function(data){
-                console.log(data);
                 ClientData = data.data;
             },
             error: function () {
@@ -132,7 +130,6 @@
 
         // 監聽縣市選單, 產生鄉鎮區選單
         $("#city").change(function(){
-            // console.log($(this).val());
             citySelected = $(this).val();
 
             // 渲染鄉鎮區選單
@@ -141,7 +138,6 @@
             CityCountyData.forEach(function(item){
                 if(item.CityName == citySelected){
                     item.AreaList.forEach(function(item){
-                        // console.log(item.AreaName);
                         var strHTML = '<option value="' + item.AreaName + '">' + item.AreaName + '</option>';
                         $("#region").append(strHTML);
                     });
@@ -158,7 +154,6 @@
             var counter = 0;
             ClientData.forEach(function(item){
                 if(item.City == citySelected && item.Town == regionSelected){
-                    // console.log(item);
                     var memberRankColor;
                     switch(item.Level){
                         case 100:
@@ -176,11 +171,6 @@
                     }
                     var strHTML = '<a href="javascript:move_to_there(' + item.CordY + ', ' + item.CordX + ')" data-x="' + item.CordY + '" data-y="' + item.CordX + '" style="text-decoration: none;" id="hotel_button"><li class="list-group-item d-flex justify-content-between align-items-center my-1"><div><div class="h3 fw-900">' + item.Username + '</div><div class="h4">地址: ' + item.Address + '</div><div class="h4">電話: ' + item.Tel + '</div></div><span class="badge bg-primary rounded-pill"><i class="fa-solid fa-star text-' + memberRankColor + '"></i></span></li></a>';
                     $("#regionList").append(strHTML);
-
-                    // if(item.Picture1 == ""){
-                    //     item.Picture1 = "images/con01.jpg"
-                    // }
-
                     var popupHTML = '<div class="card"><div class="card-body"><div class="h4 fw-900">' + item.Username + '</div><div class="h5">地址: ' + item.Address + '</div><div class="h5">電話: ' + item.Tel + '</div><div class="h5"><span class="badge bg-primary rounded-pill"><i class="fa-solid fa-star text-' + memberRankColor + '"></i></span></div></div></div>'
 
                     markers.addLayer(L.marker([item.CordY, item.CordX]).bindPopup(popupHTML));
@@ -203,13 +193,6 @@
                 markers.removeLayer(layer);
             }
         });
-
-        // 原有語法 map上有layer
-        // map.eachLayer(function(layer){
-        //     if(layer instanceof L.Marker){
-        //         map.removeLayer(layer);
-        //     }
-        // });
     }
 
     // 點擊左側按鈕移動到指定座標

@@ -15,7 +15,6 @@ Route::group(["prefix" => "member"], function () {
     Route::get("list", [MemberController::class, "list"]);
     Route::get("add", [MemberController::class, "add"]);
     Route::post("insert", [MemberController::class, "insert"]);
-    // {}:參數(變數) ?:可能有,也可能沒有
     Route::get("edit/{id?}", [MemberController::class, "edit"]);
     Route::post("update", [MemberController::class, "update"]);
     Route::post("delete", [MemberController::class, "delete"]);

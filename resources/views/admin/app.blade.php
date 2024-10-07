@@ -39,14 +39,8 @@
     <script src="/js/jquery.js"></script>
     <script>
         $(document).ready(function() {
-            // #:代表id
             $("#all").click(function() {
-                // 在很多程式語言中都有this, this代表這個物件
                 if ($(this).is(":checked")) {
-                    // .:代表class
-                    // attr:屬性
-                    // 當id為all的checkbox被選取時,所有class為chk的都被選取
-                    //這裡會有class而不是用id的原因為, 不知道有多少的選項要被選取, 無法得知所有id
                     $(".chk").attr("checked", true);
                 } else {
                     $(".chk").attr("checked", false);
@@ -209,10 +203,6 @@
     <script src="/js/jquery.overlayScrollbars.min.js"></script>
     <!-- AdminLTE App -->
     <script src="/js/adminlte.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="/js/demo.js"></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="/js/dashboard.js"></script>
 </body>
 
 </html>
